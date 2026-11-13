@@ -156,7 +156,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
             type="date"
             value={selectedDate}
             onChange={e => setSelectedDate(e.target.value)}
-            className="p-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-white shadow-2xs"
+            className="p-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-card shadow-2xs"
           />
           <button
             type="button"
@@ -176,7 +176,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
       )}
 
       {/* 1. Silhouette Anatomique Interactive */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
             <Activity className="w-5 h-5 text-rose-500" />
@@ -189,7 +189,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
       </div>
 
       {/* 2. Douleurs & Formulaire détaillé (1 à 10) */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-6">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-6">
         <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
           <Heart className="w-5 h-5 text-rose-500" />
           Noter une douleur
@@ -291,7 +291,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
                   {symptoms.filter(s => s.category === 'pain').map(item => (
                     <div
                       key={item.id}
-                      className="flex items-center justify-between p-3 rounded-xl bg-white border border-rose-100 shadow-2xs"
+                      className="flex items-center justify-between p-3 rounded-xl bg-card border border-rose-100 shadow-2xs"
                     >
                       <div>
                         <span className="text-xs font-bold text-zinc-800">{item.name}</span>
@@ -329,7 +329,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
       </div>
 
       {/* 3. Symptômes physiques généraux */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-purple-500" />
           Ce que tu ressens aussi
@@ -349,7 +349,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
                 className={`p-3 rounded-2xl text-left border transition-all flex items-center justify-between text-xs font-medium ${
                   isChecked
                     ? 'border-purple-500 bg-purple-50 text-purple-900 font-bold shadow-2xs'
-                    : 'border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-700'
+                    : 'border-zinc-200 bg-card hover:bg-zinc-50 text-zinc-700'
                 }`}
               >
                 <span>{sym}</span>
@@ -367,7 +367,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
       </div>
 
       {/* 4. Santé vaginale & Pertes */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-6">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-6">
         <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
           <Shield className="w-5 h-5 text-pink-500" />
           Mes pertes et mon confort intime
@@ -395,7 +395,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
                     className={`p-2.5 rounded-xl text-xs text-left border ${
                       vaginalHealth.dischargeType === item.id
                         ? 'bg-rose-500 text-white border-rose-600 font-bold'
-                        : 'bg-white hover:bg-zinc-50 border-zinc-200 text-zinc-700'
+                        : 'bg-card hover:bg-zinc-50 border-zinc-200 text-zinc-700'
                     }`}
                   >
                     {item.label}
@@ -422,7 +422,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
                     className={`px-3 py-1.5 rounded-xl text-xs border ${
                       vaginalHealth.odor === item.id
                         ? 'bg-purple-600 text-white border-purple-700 font-bold'
-                        : 'bg-white hover:bg-zinc-50 border-zinc-200 text-zinc-700'
+                        : 'bg-card hover:bg-zinc-50 border-zinc-200 text-zinc-700'
                     }`}
                   >
                     {item.label}
@@ -451,7 +451,7 @@ export const BodyView: React.FC<BodyViewProps> = ({ todayLog, allLogs, onSaveLog
                     className={`w-full p-3 rounded-xl text-left border flex items-center justify-between transition-all ${
                       checked
                         ? 'bg-amber-500 text-white border-amber-600 shadow-xs'
-                        : 'bg-white hover:bg-zinc-50 border-zinc-200 text-zinc-700'
+                        : 'bg-card hover:bg-zinc-50 border-zinc-200 text-zinc-700'
                     }`}
                   >
                     <div>

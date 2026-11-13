@@ -11,7 +11,6 @@ import {
   Bell,
   TrendingUp,
   User,
-  MessageCircle,
   ChevronLeft,
   ChevronRight,
   Plus,
@@ -30,7 +29,6 @@ export type NavTabId =
   | 'reminders'
   | 'normality'
   | 'encyclopedia'
-  | 'assistant'
   | 'fertility'
   | 'healthRecords'
   | 'statistics'
@@ -69,7 +67,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const LEARN_ITEMS: Array<{ id: NavTabId; label: string; icon: any }> = [
     { id: 'normality', label: t.nav.normality, icon: HelpCircle },
     { id: 'encyclopedia', label: t.nav.encyclopedia, icon: BookOpen },
-    { id: 'assistant', label: t.nav.assistant, icon: MessageCircle },
     { id: 'fertility', label: t.nav.fertility, icon: Baby },
     { id: 'statistics', label: t.nav.statistics, icon: TrendingUp },
     { id: 'healthRecords', label: t.nav.healthRecords, icon: FileText }
@@ -87,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         title={isSidebarCollapsed ? item.label : undefined}
         className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all ${
           active
-            ? 'bg-[#FF6584] text-white shadow-md shadow-rose-300/50 scale-[1.01]'
+            ? 'bg-[#e8283c] text-white shadow-md shadow-rose-300/50 scale-[1.01]'
             : 'text-zinc-600 hover:text-zinc-900 hover:bg-rose-100/60'
         }`}
       >
@@ -101,19 +98,19 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       {/* Barre latérale sur ordinateur */}
       <aside
-        className={`hidden md:flex flex-col border-r border-rose-200/70 bg-linear-to-b from-white via-rose-50/30 to-pink-50/20 transition-all duration-300 z-30 shrink-0 ${
+        className={`hidden md:flex flex-col border-r border-rose-200/70 bg-linear-to-b from-card via-rose-50/30 to-pink-50/20 transition-all duration-300 z-30 shrink-0 ${
           isSidebarCollapsed ? 'w-20' : 'w-64'
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-rose-100">
           {!isSidebarCollapsed && (
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-2xl bg-linear-to-tr from-[#FF7A9C] to-[#FF4370] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-rose-200">
+              <div className="w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff6b5e] to-[#e8283c] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-rose-200">
                 ✨
               </div>
               <div>
                 <h1 className="text-lg font-black text-zinc-900 tracking-tight leading-none">Mood</h1>
-                <span className="text-[10px] text-[#FF5B84] font-extrabold tracking-wider uppercase">
+                <span className="text-[10px] text-[#e8283c] font-extrabold tracking-wider uppercase">
                   {discreteMode ? 'Espace privé' : 'Mon espace'}
                 </span>
               </div>
@@ -121,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           )}
 
           {isSidebarCollapsed && (
-            <div className="mx-auto w-10 h-10 rounded-2xl bg-linear-to-tr from-[#FF7A9C] to-[#FF4370] text-white flex items-center justify-center font-bold shadow-md">
+            <div className="mx-auto w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff6b5e] to-[#e8283c] text-white flex items-center justify-center font-bold shadow-md">
               ✨
             </div>
           )}
@@ -161,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={onOpenQuickAdd}
-              className="w-full py-3 rounded-2xl bg-linear-to-r from-[#FF7A9C] to-[#FF4370] text-white text-xs font-extrabold shadow-md shadow-rose-200 flex items-center justify-center gap-2 hover:opacity-95 transition-all"
+              className="w-full py-3 rounded-2xl bg-linear-to-r from-[#ff6b5e] to-[#e8283c] text-white text-xs font-extrabold shadow-md shadow-rose-200 flex items-center justify-center gap-2 hover:opacity-95 transition-all"
             >
               <Plus className="w-4 h-4 stroke-[3]" />
               <span>Noter ma journée</span>
@@ -171,13 +168,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       </aside>
 
       {/* Barre du bas sur téléphone */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-rose-200/80 px-3 py-2 shadow-xl">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur-md border-t border-rose-200/80 px-3 py-2 shadow-xl">
         <div className="flex items-center justify-between max-w-md mx-auto relative">
           <button
             type="button"
             onClick={() => onSelectTab('home')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'home' ? 'text-[#FF5B84] font-black' : 'text-zinc-400'
+              currentTab === 'home' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
             }`}
           >
             <Home className="w-5 h-5" />
@@ -188,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('cycle')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'cycle' ? 'text-[#FF5B84] font-black' : 'text-zinc-400'
+              currentTab === 'cycle' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
             }`}
           >
             <CalendarDays className="w-5 h-5" />
@@ -199,7 +196,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={onOpenQuickAdd}
-              className="w-13 h-13 rounded-full bg-[#FF5B84] hover:bg-[#FF4370] active:scale-95 text-white flex items-center justify-center shadow-lg shadow-rose-400/60 transition-all border-4 border-white"
+              className="w-13 h-13 rounded-full bg-[#e8283c] hover:bg-[#c41426] active:scale-95 text-white flex items-center justify-center shadow-lg shadow-rose-400/60 transition-all border-4 border-zinc-200"
               title="Noter ma journée"
             >
               <Plus className="w-6 h-6 stroke-[3]" />
@@ -210,7 +207,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('tools')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'tools' ? 'text-[#FF5B84] font-black' : 'text-zinc-400'
+              currentTab === 'tools' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
             }`}
           >
             <Sparkles className="w-5 h-5" />
@@ -221,7 +218,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('profile')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'profile' ? 'text-[#FF5B84] font-black' : 'text-zinc-400'
+              currentTab === 'profile' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
             }`}
           >
             <User className="w-5 h-5" />

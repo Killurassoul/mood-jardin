@@ -33,7 +33,7 @@ export const BodySilhouette: React.FC<BodySilhouetteProps> = ({
   return (
     <div className={`flex flex-col md:flex-row items-center gap-6 p-4 rounded-3xl bg-linear-to-b from-rose-50/70 to-purple-50/40 border border-rose-100/80 shadow-xs ${className}`}>
       {/* SVG Interactive Silhouette */}
-      <div className="relative w-56 h-88 shrink-0 flex items-center justify-center bg-white/70 rounded-2xl p-2 border border-rose-100">
+      <div className="relative w-56 h-88 shrink-0 flex items-center justify-center bg-card/70 rounded-2xl p-2 border border-rose-100">
         <svg viewBox="0 0 200 400" className="w-full h-full drop-shadow-sm select-none">
           <defs>
             <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
@@ -199,12 +199,12 @@ export const BodySilhouette: React.FC<BodySilhouetteProps> = ({
                 className={`flex items-start gap-3 p-3 text-left rounded-2xl transition-all duration-200 border ${
                   active
                     ? 'bg-rose-500 text-white border-rose-600 shadow-sm scale-[1.01]'
-                    : 'bg-white/80 hover:bg-rose-50/50 text-zinc-700 border-rose-100 hover:border-rose-200'
+                    : 'bg-card/80 hover:bg-rose-50/50 text-zinc-700 border-rose-100 hover:border-rose-200'
                 }`}
               >
                 <span
                   className={`w-3.5 h-3.5 mt-0.5 rounded-full shrink-0 border-2 transition-all ${
-                    active ? 'bg-white border-white' : 'border-rose-300 bg-transparent'
+                    active ? 'bg-card border-zinc-200' : 'border-rose-300 bg-transparent'
                   }`}
                 />
                 <div className="min-w-0">

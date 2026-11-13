@@ -116,7 +116,7 @@ export const ProfileSecurityView: React.FC<ProfileSecurityViewProps> = ({
       </div>
 
       {/* Form: Profile and Cycle Defaults */}
-      <form onSubmit={handleSaveProfile} className="p-6 sm:p-8 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-6">
+      <form onSubmit={handleSaveProfile} className="p-6 sm:p-8 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-6">
         <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2 border-b border-rose-100 pb-3">
           <User className="w-5 h-5 text-rose-500" />
           Mes préférences
@@ -192,7 +192,7 @@ export const ProfileSecurityView: React.FC<ProfileSecurityViewProps> = ({
               }`}
             >
               <div
-                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                className={`bg-card w-4 h-4 rounded-full shadow-md transform transition-transform ${
                   isPinEnabled ? 'translate-x-6' : 'translate-x-0'
                 }`}
               />
@@ -263,7 +263,7 @@ export const ProfileSecurityView: React.FC<ProfileSecurityViewProps> = ({
       </form>
 
       {/* Export & Import Data */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <h3 className="text-base font-bold text-zinc-900">
           Sauvegarder mes données
         </h3>
@@ -309,12 +309,12 @@ export const ProfileSecurityView: React.FC<ProfileSecurityViewProps> = ({
           <button
             type="button"
             onClick={() => setShowWipeConfirm(true)}
-            className="px-4 py-2.5 rounded-xl bg-white hover:bg-red-100 border border-red-300 text-red-700 text-xs font-bold transition-colors"
+            className="px-4 py-2.5 rounded-xl bg-card hover:bg-red-100 border border-red-300 text-red-700 text-xs font-bold transition-colors"
           >
             Tout effacer
           </button>
         ) : (
-          <div className="p-4 rounded-2xl bg-white border border-red-300 space-y-3">
+          <div className="p-4 rounded-2xl bg-card border border-red-300 space-y-3">
             <p className="text-xs font-bold text-red-700">
               Es-tu sûre ? Toutes tes informations seront effacées et ne pourront pas être récupérées.
             </p>

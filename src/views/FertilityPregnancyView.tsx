@@ -68,7 +68,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
         </div>
 
         {/* Sub-modes selector */}
-        <div className="flex items-center bg-white border border-rose-200 rounded-2xl p-1 shadow-2xs self-start sm:self-auto">
+        <div className="flex items-center bg-card border border-rose-200 rounded-2xl p-1 shadow-2xs self-start sm:self-auto">
           <button
             type="button"
             onClick={() => selectMode('fertility')}
@@ -118,7 +118,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Fertile window card */}
-            <div className="p-6 rounded-3xl bg-linear-to-b from-purple-50 to-white border border-purple-100 shadow-xs space-y-3">
+            <div className="p-6 rounded-3xl bg-linear-to-b from-purple-50 to-card border border-purple-100 shadow-xs space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
                 Période où une grossesse est possible
               </span>
@@ -134,7 +134,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
             </div>
 
             {/* Basal body temp */}
-            <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+            <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-rose-700">
                   Température le matin
@@ -159,7 +159,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
             </div>
 
             {/* LH Ovulation test */}
-            <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+            <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-purple-700">
                   Test de fertilité urinaire
@@ -191,7 +191,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
           </div>
 
           {/* Advice card */}
-          <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-xs space-y-3">
+          <div className="p-6 rounded-3xl bg-card border border-purple-100 shadow-xs space-y-3">
             <h3 className="text-base font-bold text-zinc-900">
               Pour mettre toutes les chances de ton côté :
             </h3>
@@ -216,7 +216,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
       {/* SUB-MODE 2: GROSSESSE (SEMAINE PAR SEMAINE) */}
       {activeSubMode === 'pregnancy' && (
         <div className="space-y-6">
-          <div className="p-4 rounded-2xl bg-white border border-rose-100 text-xs text-zinc-700">
+          <div className="p-4 rounded-2xl bg-card border border-rose-100 text-xs text-zinc-700">
             <label className="block font-bold mb-2">Date du début de grossesse (si tu la connais)</label>
             <input type="date" value={profile.pregnancyConceptionDate || ''} onChange={e => onUpdateProfile({ pregnancyConceptionDate: e.target.value || undefined })} className="w-full sm:w-56 p-2.5 rounded-xl border border-rose-200" />
           </div>
@@ -234,7 +234,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
+              <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-zinc-200/20 text-center">
                 <span className="text-[10px] uppercase font-bold text-rose-200">Date prévue d’accouchement</span>
                 <div className="text-lg font-black text-white">{dueDate || 'À renseigner'}</div>
               </div>
@@ -257,7 +257,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
           </div>
 
           {/* Week milestones */}
-          <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+          <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
             <h3 className="text-base font-bold text-zinc-900">
               Ce qui se passe semaine après semaine :
             </h3>
@@ -276,7 +276,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
                     <span className="text-xs font-black text-rose-700">
                       Semaine {item.week}
                     </span>
-                    <span className="text-[11px] font-bold text-zinc-600 bg-white px-2 py-0.5 rounded-md border border-zinc-200">
+                    <span className="text-[11px] font-bold text-zinc-600 bg-card px-2 py-0.5 rounded-md border border-zinc-200">
                       🍇 {item.sizeFruit}
                     </span>
                   </div>
@@ -296,7 +296,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
       {/* SUB-MODE 3: POST-PARTUM */}
       {activeSubMode === 'postpartum' && (
         <div className="space-y-6">
-          <div className="p-4 rounded-2xl bg-white border border-indigo-100 text-xs text-zinc-700">
+          <div className="p-4 rounded-2xl bg-card border border-indigo-100 text-xs text-zinc-700">
             <label className="block font-bold mb-2">Date de l’accouchement (facultative)</label>
             <input type="date" value={profile.postpartumDeliveryDate || ''} onChange={e => { const date = e.target.value || undefined; onUpdateProfile({ postpartumDeliveryDate: date }); if (date) setPostpartumDays(Math.max(1, daysBetween(parseDate(date), new Date()))); }} className="w-full sm:w-56 p-2.5 rounded-xl border border-indigo-200" />
           </div>
@@ -330,7 +330,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Lochia tracking */}
-            <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+            <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
               <h4 className="text-sm font-bold text-zinc-900">
                 Mes saignements après l’accouchement :
               </h4>
@@ -366,7 +366,7 @@ export const FertilityPregnancyView: React.FC<FertilityPregnancyViewProps> = ({
             </div>
 
             {/* Emotional well-being / Postpartum depression screening */}
-            <div className="p-6 rounded-3xl bg-white border border-purple-100 shadow-xs space-y-4">
+            <div className="p-6 rounded-3xl bg-card border border-purple-100 shadow-xs space-y-4">
               <h4 className="text-sm font-bold text-zinc-900">
                 Comment va ton moral ?
               </h4>

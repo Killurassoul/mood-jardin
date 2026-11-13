@@ -14,6 +14,7 @@ import {
   ContraceptionRecord
 } from './types';
 import { StorageService } from './services/storage';
+import { syncNotifications } from './services/notifications';
 import { calculateCycleStatus, formatDate } from './services/cycleCalculator';
 import { Navbar, NavTabId } from './components/Navbar';
 import { Header } from './components/Header';
@@ -29,7 +30,6 @@ import { BodyView } from './views/BodyView';
 import { MoodView } from './views/MoodView';
 import { EncyclopediaView } from './views/EncyclopediaView';
 import { NormalityChecker } from './views/NormalityChecker';
-import { AssistantView } from './views/AssistantView';
 import { FertilityPregnancyView } from './views/FertilityPregnancyView';
 import { HealthRecordsView } from './views/HealthRecordsView';
 import { StatisticsView } from './views/StatisticsView';
@@ -73,10 +73,10 @@ export default function App() {
   // Recalculate cycle status whenever cycles or profile change
   const cycleStats = calculateCycleStatus(cycles, profile.cycleLength, profile.periodLength);
 
-  // Permanent light pink theme
+  // Keep phone notifications in step with reminders and the predicted cycle.
   useEffect(() => {
-    document.documentElement.classList.remove('dark');
-  }, []);
+    syncNotifications(reminders, profile, cycleStats).catch(err => console.error('Notifications', err));
+  }, [reminders, profile.discreteMode, cycleStats.nextPeriodDate, cycleStats.fertileWindowStart]);
 
   // Profile handlers
   const handleUpdateProfile = (updates: Partial<UserProfile>) => {
@@ -194,7 +194,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen flex bg-[#FFF5F8] text-zinc-800 font-sans transition-colors duration-200 ${textScaleClass}`}
+      className={`min-h-screen flex text-zinc-800 font-sans transition-colors duration-200 ${textScaleClass}`}
     >
       {isLocked && profile.isPinEnabled && profile.pinCode && (
         <PinLockModal
@@ -313,10 +313,6 @@ export default function App() {
               onOpenArticle={handleOpenArticle}
               onSelectTab={tab => setCurrentTab(tab)}
             />
-          )}
-
-          {currentTab === 'assistant' && (
-            <AssistantView onOpenArticle={handleOpenArticle} />
           )}
 
           {currentTab === 'fertility' && (

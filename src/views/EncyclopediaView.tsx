@@ -50,7 +50,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
             <button
               type="button"
               onClick={() => setSelectedArticleId(null)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-rose-100 text-xs font-bold text-zinc-700 hover:bg-rose-50 shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-card border border-rose-100 text-xs font-bold text-zinc-700 hover:bg-rose-50 shadow-2xs transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> Retour au guide
             </button>
@@ -61,7 +61,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
               className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border transition-colors ${
                 savedArticles.includes(activeArticle.id)
                   ? 'bg-rose-500 text-white border-rose-600'
-                  : 'bg-white text-zinc-700 border-zinc-200 hover:bg-zinc-50'
+                  : 'bg-card text-zinc-700 border-zinc-200 hover:bg-zinc-50'
               }`}
             >
               <Bookmark className="w-3.5 h-3.5" />
@@ -70,7 +70,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
           </div>
 
           {/* Article Container */}
-          <article className="p-6 sm:p-10 rounded-3xl bg-white border border-rose-100/80 shadow-xs space-y-8">
+          <article className="p-6 sm:p-10 rounded-3xl bg-card border border-rose-100/80 shadow-xs space-y-8">
             {/* Header / Subcategory */}
             <div className="space-y-2 border-b border-rose-100 pb-6">
               <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
               </h4>
               <div className="flex flex-wrap gap-2">
                 {activeArticle.medicalSources.map((source, i) => (
-                  <div key={i} className="text-[11px] px-3 py-1 rounded-lg bg-white border border-zinc-200 text-zinc-700">
+                  <div key={i} className="text-[11px] px-3 py-1 rounded-lg bg-card border border-zinc-200 text-zinc-700">
                     <strong className="text-rose-700">{source.name}</strong> — {source.description}
                   </div>
                 ))}
@@ -254,7 +254,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 placeholder="Cherche un mot simple (ex : sang marron, boutons, endométriose)..."
-                className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white border border-rose-200 text-sm text-zinc-800 placeholder-zinc-400 shadow-xs focus:outline-hidden focus:ring-2 focus:ring-rose-400"
+                className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-card border border-rose-200 text-sm text-zinc-800 placeholder-zinc-400 shadow-xs focus:outline-hidden focus:ring-2 focus:ring-rose-400"
               />
             </div>
 
@@ -266,7 +266,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                   selectedCategory === 'all'
                     ? 'bg-rose-500 text-white shadow-xs'
-                    : 'bg-white text-zinc-600 hover:bg-rose-50 border border-zinc-200'
+                    : 'bg-card text-zinc-600 hover:bg-rose-50 border border-zinc-200'
                 }`}
               >
                 Tout ({MEDICAL_ARTICLES.length})
@@ -279,7 +279,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                     selectedCategory === cat.id
                       ? 'bg-rose-500 text-white shadow-xs'
-                      : 'bg-white text-zinc-600 hover:bg-rose-50 border border-zinc-200'
+                      : 'bg-card text-zinc-600 hover:bg-rose-50 border border-zinc-200'
                   }`}
                 >
                   {cat.name}
@@ -296,7 +296,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
                   key={cat.id}
                   type="button"
                   onClick={() => setSelectedCategory(cat.id)}
-                  className="p-3.5 rounded-2xl bg-white border border-rose-100 hover:border-rose-300 hover:shadow-xs transition-all text-left flex flex-col justify-between group"
+                  className="p-3.5 rounded-2xl bg-card border border-rose-100 hover:border-rose-300 hover:shadow-xs transition-all text-left flex flex-col justify-between group"
                 >
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md inline-block w-fit mb-2 ${cat.color}`}>
                     {cat.name}
@@ -320,7 +320,7 @@ export const EncyclopediaView: React.FC<EncyclopediaViewProps> = ({ initialArtic
                 <div
                   key={article.id}
                   onClick={() => setSelectedArticleId(article.id)}
-                  className="p-5 rounded-3xl bg-white border border-rose-100 hover:border-rose-300 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
+                  className="p-5 rounded-3xl bg-card border border-rose-100 hover:border-rose-300 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">

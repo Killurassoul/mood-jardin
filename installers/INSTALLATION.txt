@@ -5,15 +5,15 @@ Tes données restent sur ton appareil.
 Pas de compte, pas de publicité, pas de jugement.
 
 Les deux fichiers d’installation sont dans le dossier « installers » :
-- « Mood Jardin Setup 1.0.0.exe » pour Windows
-- « Mood Jardin 1.0.0.apk » pour Android
+- « Mood Jardin Setup 1.1.0.exe » pour Windows
+- « Mood Jardin 1.1.0.apk » pour Android
 
 
 1. SUR WINDOWS
 --------------
 
 1. Ouvre le dossier « installers ».
-2. Double-clique sur « Mood Jardin Setup 1.0.0.exe ».
+2. Double-clique sur « Mood Jardin Setup 1.1.0.exe ».
 3. Si Windows affiche un avertissement bleu, clique sur
    « Informations complémentaires », puis « Exécuter quand même ».
 4. Clique sur « Suivant ».
@@ -28,7 +28,7 @@ Paramètres Windows > Applications > Mood Jardin > Désinstaller.
 --------------
 
 1. Dans le dossier « installers », copie le fichier
-   « Mood Jardin 1.0.0.apk » sur ton téléphone
+   « Mood Jardin 1.1.0.apk » sur ton téléphone
    (par câble, par email ou par un service de transfert).
 2. Ouvre le fichier avec l’application « Fichiers » de ton téléphone.
 3. Si Android demande d’autoriser les applications inconnues,

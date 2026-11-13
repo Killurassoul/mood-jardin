@@ -77,7 +77,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
       {/* Grid: Cycle Duration Evolution */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Cycle Lengths Bar Chart */}
-        <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+        <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-rose-100 pb-3">
             <h3 className="text-sm font-bold text-zinc-900 flex items-center gap-2">
               <Calendar className="w-4 h-4 text-rose-500" />
@@ -112,7 +112,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
         </div>
 
         {/* Bleeding Duration Evolution */}
-        <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+        <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-rose-100 pb-3">
             <h3 className="text-sm font-bold text-zinc-900 flex items-center gap-2">
               <Activity className="w-4 h-4 text-purple-500" />
@@ -149,7 +149,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
 
       {/* Frequent symptoms & sleep quality */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-3">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-3">
           <div className="flex items-center justify-between text-xs font-bold text-zinc-500 uppercase tracking-wider">
             <span>Douleurs notées</span>
             <Activity className="w-4 h-4 text-rose-500" />
@@ -162,7 +162,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           </p>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-3">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-3">
           <div className="flex items-center justify-between text-xs font-bold text-zinc-500 uppercase tracking-wider">
             <span>Bons moments</span>
             <Heart className="w-4 h-4 text-pink-500" />
@@ -175,7 +175,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           </p>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-3">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-3">
           <div className="flex items-center justify-between text-xs font-bold text-zinc-500 uppercase tracking-wider">
             <span>Sommeil moyen</span>
             <Moon className="w-4 h-4 text-indigo-500" />

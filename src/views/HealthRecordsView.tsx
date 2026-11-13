@@ -163,14 +163,14 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
         <button
           type="button"
           onClick={handleDownloadPdf}
-          className="px-6 py-3.5 rounded-2xl bg-white text-rose-700 hover:bg-rose-50 text-xs font-extrabold shadow-lg transition-transform hover:scale-105 shrink-0"
+          className="px-6 py-3.5 rounded-2xl bg-white text-[#e8283c] hover:bg-rose-950 text-xs font-extrabold shadow-lg transition-transform hover:scale-105 shrink-0"
         >
           Télécharger le résumé
         </button>
       </div>
 
       {/* Section 1: Contraception actuelle */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <div className="flex items-center justify-between border-b border-rose-100 pb-3">
           <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
             <Shield className="w-5 h-5 text-rose-500" />
@@ -228,7 +228,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
       </div>
 
       {/* Section 2: Carnet de rendez-vous médicaux */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <div className="flex items-center justify-between border-b border-rose-100 pb-3">
           <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
             <Calendar className="w-5 h-5 text-purple-500" />
@@ -273,7 +273,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
                   <div className="text-[11px] text-zinc-500">
                     Lieu : {apt.location || 'Cabinet médical'}
                   </div>
-                  <div className="text-[11px] text-zinc-700 font-medium bg-white p-2 rounded-xl border border-zinc-200">
+                  <div className="text-[11px] text-zinc-700 font-medium bg-card p-2 rounded-xl border border-zinc-200">
                     Pourquoi : {apt.reason}
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
       </div>
 
       {/* Section 3: Médicaments et compléments */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <div className="flex items-center justify-between border-b border-rose-100 pb-3">
           <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
             <Pill className="w-5 h-5 text-rose-500" />
@@ -335,7 +335,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-rose-950/25 backdrop-blur-xs">
           <form
             onSubmit={handleAddAppointment}
-            className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
+            className="w-full max-w-md bg-card rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
           >
             <h3 className="text-base font-bold text-zinc-900">Nouveau rendez-vous</h3>
             <div>
@@ -424,7 +424,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-rose-950/25 backdrop-blur-xs">
           <form
             onSubmit={handleAddMedication}
-            className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
+            className="w-full max-w-md bg-card rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
           >
             <h3 className="text-base font-bold text-zinc-900">Ajouter un médicament</h3>
             <div>

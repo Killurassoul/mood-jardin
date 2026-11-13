@@ -94,7 +94,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
       {/* STEP 1: PICK FREQUENT SITUATION */}
       {step === 'pick' && (
         <div className="space-y-6">
-          <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+          <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
             <h3 className="text-sm font-bold text-zinc-900">
               Choisis ce qui t’arrive :
             </h3>
@@ -105,7 +105,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
                   key={preset.id}
                   type="button"
                   onClick={() => handleStartQuestions(preset.id)}
-                  className="p-4 rounded-2xl text-left border border-zinc-200 hover:border-rose-400 hover:bg-rose-50/50 bg-white transition-all group shadow-2xs"
+                  className="p-4 rounded-2xl text-left border border-zinc-200 hover:border-rose-400 hover:bg-rose-50/50 bg-card transition-all group shadow-2xs"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-zinc-800 group-hover:text-rose-700">
@@ -149,7 +149,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
       {step === 'questions' && (
         <form
           onSubmit={handleCalculateTriage}
-          className="p-6 sm:p-8 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-6"
+          className="p-6 sm:p-8 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-6"
         >
           <div className="border-b border-rose-100 pb-4 flex items-center justify-between">
             <div>
@@ -265,7 +265,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
                 { state: isPregnancyPossible, set: setIsPregnancyPossible, label: 'Possible grossesse ou test positif' },
                 { state: hasAbnormalSmell, set: setHasAbnormalSmell, label: 'Pertes à très forte odeur' }
               ].map((item, idx) => (
-                <label key={idx} className="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-rose-100 cursor-pointer text-xs font-medium text-zinc-800">
+                <label key={idx} className="flex items-center gap-3 p-2.5 rounded-xl bg-card border border-rose-100 cursor-pointer text-xs font-medium text-zinc-800">
                   <input
                     type="checkbox"
                     checked={item.state}
@@ -333,7 +333,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
               {triageResult.summary}
             </p>
 
-            <div className="p-4 rounded-2xl bg-white/80 border border-white/60 space-y-2 text-xs leading-relaxed text-zinc-800">
+            <div className="p-4 rounded-2xl bg-card/80 border border-zinc-200/60 space-y-2 text-xs leading-relaxed text-zinc-800">
               <strong className="block text-zinc-900">Ce qu’il faut savoir :</strong>
               <p>{triageResult.detailedAnalysis}</p>
             </div>
@@ -375,7 +375,7 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
                 <button
                   type="button"
                   onClick={() => onOpenArticle(triageResult.suggestedArticleId!)}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-rose-200 text-rose-700 text-xs font-bold hover:bg-rose-50 shadow-2xs"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-rose-200 text-rose-700 text-xs font-bold hover:bg-rose-50 shadow-2xs"
                 >
                   <BookOpen className="w-4 h-4" /> Lire l’article du guide →
                 </button>
@@ -392,10 +392,10 @@ export const NormalityChecker: React.FC<NormalityCheckerProps> = ({
               </button>
               <button
                 type="button"
-                onClick={() => onSelectTab('assistant')}
+                onClick={() => onSelectTab('encyclopedia')}
                 className="text-xs text-rose-600 hover:text-rose-800 underline font-bold"
               >
-                Poser la question à l’assistante →
+                Lire le guide santé →
               </button>
             </div>
           </div>

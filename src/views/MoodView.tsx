@@ -119,7 +119,7 @@ export const MoodView: React.FC<MoodViewProps> = ({ todayLog, allLogs, onSaveLog
               if (target?.mood?.ratings) setRatings(target.mood.ratings);
               if (target?.mood?.freeJournal) setFreeJournal(target.mood.freeJournal);
             }}
-            className="p-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-white shadow-2xs"
+            className="p-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-card shadow-2xs"
           />
           <button
             type="button"
@@ -149,7 +149,7 @@ export const MoodView: React.FC<MoodViewProps> = ({ todayLog, allLogs, onSaveLog
       {/* Grid: Emotion ratings (left) and Free journal (right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Emotion scales (7 cols) */}
-        <div className="lg:col-span-7 p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-5">
+        <div className="lg:col-span-7 p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-5">
           <div className="flex items-center justify-between border-b border-rose-100 pb-3">
             <h3 className="text-base font-bold text-zinc-900">
               Comment te sens-tu ? (0 = pas du tout, 10 = beaucoup)
@@ -168,7 +168,7 @@ export const MoodView: React.FC<MoodViewProps> = ({ todayLog, allLogs, onSaveLog
                       <Icon className={`w-4 h-4 ${item.color}`} />
                       {item.label}
                     </span>
-                    <span className="text-xs font-extrabold text-rose-600 bg-white px-2 py-0.5 rounded-md border border-rose-200 shadow-2xs">
+                    <span className="text-xs font-extrabold text-rose-600 bg-card px-2 py-0.5 rounded-md border border-rose-200 shadow-2xs">
                       {val} / 10
                     </span>
                   </div>
@@ -188,7 +188,7 @@ export const MoodView: React.FC<MoodViewProps> = ({ todayLog, allLogs, onSaveLog
 
         {/* Free Journal & Past Notes (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+          <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-base font-bold text-zinc-900 flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-rose-500" />
@@ -221,7 +221,7 @@ export const MoodView: React.FC<MoodViewProps> = ({ todayLog, allLogs, onSaveLog
           </div>
 
           {/* Past reflections stream */}
-          <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+          <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500">
               Mes derniers écrits ({pastEntries.length})
             </h4>

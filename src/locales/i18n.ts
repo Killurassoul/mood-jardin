@@ -17,7 +17,6 @@ export const translations = {
       reminders: "Mes rappels",
       statistics: "Mes tendances",
       profile: "Mon profil",
-      assistant: "L'assistante"
     },
     common: {
       save: "Enregistrer",
@@ -242,7 +241,6 @@ export const translations = {
       reminders: "My Reminders",
       statistics: "My Patterns",
       profile: "My Profile",
-      assistant: "The Assistant"
     },
     common: {
       save: "Save",
@@ -467,7 +465,6 @@ export const translations = {
       reminders: "Sama fattali",
       statistics: "Sama gis-gis",
       profile: "Sama profiil",
-      assistant: "Ndawi Mood"
     },
     common: {
       save: "Denc",

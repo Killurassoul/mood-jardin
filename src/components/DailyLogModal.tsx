@@ -174,7 +174,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-rose-950/25 backdrop-blur-xs animate-in fade-in">
-      <div className="relative w-full max-w-2xl max-h-[92vh] flex flex-col bg-white rounded-3xl shadow-2xl border border-rose-100 overflow-hidden">
+      <div className="relative w-full max-w-2xl max-h-[92vh] flex flex-col bg-card rounded-3xl shadow-2xl border border-rose-100 overflow-hidden">
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-rose-100 bg-linear-to-r from-rose-50/60 to-purple-50/40">
           <div>
@@ -210,7 +210,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2 px-3 py-2.5 text-xs font-semibold rounded-t-xl transition-all border-b-2 whitespace-nowrap ${
                   active
-                    ? 'border-rose-500 text-rose-600 bg-white shadow-2xs'
+                    ? 'border-rose-500 text-rose-600 bg-card shadow-2xs'
                     : 'border-transparent text-zinc-500 hover:text-zinc-800 hover:bg-zinc-100/60'
                 }`}
               >
@@ -240,7 +240,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                       className={`p-3.5 rounded-2xl text-left border transition-all ${
                         selected
                           ? 'border-rose-500 bg-rose-50/70 text-rose-900 shadow-xs ring-2 ring-rose-300/40'
-                          : 'border-zinc-200 bg-white hover:border-rose-200 text-zinc-700'
+                          : 'border-zinc-200 bg-card hover:border-rose-200 text-zinc-700'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -266,7 +266,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                     <button
                       type="button"
                       onClick={() => setWaterGlasses(Math.max(0, waterGlasses - 1))}
-                      className="w-8 h-8 rounded-full bg-white border border-sky-200 text-sky-800 font-bold hover:bg-sky-100"
+                      className="w-8 h-8 rounded-full bg-card border border-sky-200 text-sky-800 font-bold hover:bg-sky-100"
                     >
                       -
                     </button>
@@ -279,7 +279,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                     <button
                       type="button"
                       onClick={() => setWaterGlasses(waterGlasses + 1)}
-                      className="w-8 h-8 rounded-full bg-white border border-sky-200 text-sky-800 font-bold hover:bg-sky-100"
+                      className="w-8 h-8 rounded-full bg-card border border-sky-200 text-sky-800 font-bold hover:bg-sky-100"
                     >
                       +
                     </button>
@@ -358,7 +358,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                       className={`flex items-center justify-between p-3 rounded-2xl text-left border transition-all ${
                         active
                           ? 'border-purple-500 bg-purple-50/70 text-purple-900 font-semibold'
-                          : 'border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-700'
+                          : 'border-zinc-200 bg-card hover:bg-zinc-50 text-zinc-700'
                       }`}
                     >
                       <span className="text-xs">{sym.name}</span>
@@ -401,7 +401,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                       className={`p-2.5 rounded-xl text-xs text-left border ${
                         vaginalHealth.dischargeType === item.id
                           ? 'bg-rose-500 text-white border-rose-600 font-semibold'
-                          : 'bg-white hover:bg-zinc-50 border-zinc-200 text-zinc-700'
+                          : 'bg-card hover:bg-zinc-50 border-zinc-200 text-zinc-700'
                       }`}
                     >
                       {item.label}
@@ -427,7 +427,7 @@ export const DailyLogModal: React.FC<DailyLogModalProps> = ({
                         className={`px-3 py-2 rounded-xl text-xs font-medium border ${
                           active
                             ? 'bg-amber-500 text-white border-amber-600'
-                            : 'bg-white hover:bg-zinc-50 border-zinc-200 text-zinc-700'
+                            : 'bg-card hover:bg-zinc-50 border-zinc-200 text-zinc-700'
                         }`}
                       >
                         {item.label} {active ? '✓' : '+'}

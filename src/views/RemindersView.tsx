@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ReminderItem, UserProfile } from '../types';
+import { canNotify, testNotification } from '../services/notifications';
 import {
   Bell,
   EyeOff,
@@ -57,8 +58,9 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
     setDiscreetTitle('');
   };
 
-  const handleSimulateNotification = (reminder: ReminderItem) => {
+  const handleSimulateNotification = async (reminder: ReminderItem) => {
     const textToShow = profile.discreteMode ? reminder.discreetTitle : reminder.title;
+    if (await testNotification(textToShow)) return;
     setTestNotificationAlert(textToShow);
     setTimeout(() => setTestNotificationAlert(null), 4500);
   };
@@ -73,6 +75,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
           </h2>
           <p className="text-sm text-zinc-500">
             Des petits rappels pour ne rien oublier, avec un message discret si tu es en public.
+            {canNotify ? ' Ils arrivent en notification sur ton téléphone, même appli fermée.' : ' Les notifications arrivent sur l’appli Android.'}
           </p>
         </div>
 
@@ -88,9 +91,9 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
 
       {/* Simulated notification banner */}
       {testNotificationAlert && (
-        <div className="p-4 rounded-2xl bg-linear-to-r from-rose-600 to-[#FF4370] text-white shadow-xl shadow-rose-300/40 flex items-center justify-between animate-in slide-in-from-top-4 border border-rose-300">
+        <div className="p-4 rounded-2xl bg-linear-to-r from-rose-600 to-[#e8283c] text-white shadow-xl shadow-rose-300/40 flex items-center justify-between animate-in slide-in-from-top-4 border border-rose-300">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-white text-[#FF4370] flex items-center justify-center font-bold">
+            <div className="w-8 h-8 rounded-full bg-card text-[#e8283c] flex items-center justify-center font-bold">
               <Bell className="w-4 h-4" />
             </div>
             <div>
@@ -100,7 +103,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
               <span className="text-xs font-extrabold text-white">{testNotificationAlert}</span>
             </div>
           </div>
-          <span className="text-[10px] text-white font-bold bg-white/20 px-2.5 py-1 rounded-full border border-white/30">
+          <span className="text-[10px] text-white font-bold bg-white/20 px-2.5 py-1 rounded-full border border-zinc-200/30">
             Aperçu sur ton écran
           </span>
         </div>
@@ -126,7 +129,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
           className={`px-5 py-3 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 shrink-0 ${
             profile.discreteMode
               ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-md shadow-amber-200'
-              : 'bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-300'
+              : 'bg-card hover:bg-zinc-50 text-zinc-800 border border-zinc-300'
           }`}
         >
           {profile.discreteMode ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -135,7 +138,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
       </div>
 
       {/* Reminders list */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <h3 className="text-base font-bold text-zinc-900">
           Mes rappels ({reminders.length})
         </h3>
@@ -189,7 +192,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
                   }`}
                 >
                   <div
-                    className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                    className={`bg-card w-4 h-4 rounded-full shadow-md transform transition-transform ${
                       r.enabled ? 'translate-x-6' : 'translate-x-0'
                     }`}
                   />
@@ -214,7 +217,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-rose-950/25 backdrop-blur-xs">
           <form
             onSubmit={handleAddReminder}
-            className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
+            className="w-full max-w-md bg-card rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
           >
             <h3 className="text-base font-bold text-zinc-900">Nouveau rappel</h3>
 

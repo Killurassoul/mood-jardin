@@ -18,7 +18,7 @@ import {
   TrendingUp,
   Droplet
 } from 'lucide-react';
-import { FloralGarden3D } from '../components/FloralGarden3D';
+import { CycleOrb } from '../components/CycleOrb';
 
 interface CycleViewProps {
   cycles: CycleRecord[];
@@ -150,8 +150,8 @@ export const CycleView: React.FC<CycleViewProps> = ({
         </div>
       </div>
 
-      {/* Interactive 3D Floral Garden widget */}
-      <FloralGarden3D
+      {/* Cycle orb */}
+      <CycleOrb
         stats={stats}
         onOpenLogModal={() => onOpenLogModalForDate(formatDate(new Date()))}
         onQuickLogPeriodStart={() => setShowAddCycleModal(true)}
@@ -159,7 +159,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
 
       {/* Stats summary cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 mb-2">
             <span className="text-xs font-bold uppercase tracking-wider">Longueur de mon cycle</span>
             <CalendarIcon className="w-4 h-4 text-rose-400" />
@@ -170,7 +170,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
           <p className="text-xs text-zinc-500 mt-1">Calculé avec {cycles.length} cycles</p>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 mb-2">
             <span className="text-xs font-bold uppercase tracking-wider">Durée de mes règles</span>
             <Droplet className="w-4 h-4 text-rose-500" />
@@ -181,7 +181,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
           <p className="text-xs text-zinc-500 mt-1">Nombre de jours habituel</p>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 mb-2">
             <span className="text-xs font-bold uppercase tracking-wider">Mon cycle est-il régulier ?</span>
             <TrendingUp className="w-4 h-4 text-purple-400" />
@@ -196,7 +196,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
           <p className="text-xs text-zinc-500 mt-1">D’après tes derniers cycles</p>
         </div>
 
-        <div className="p-5 rounded-3xl bg-white border border-rose-100 shadow-xs">
+        <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-xs">
           <div className="flex items-center justify-between text-zinc-500 mb-2">
             <span className="text-xs font-bold uppercase tracking-wider">Mes prochaines règles</span>
             <Clock className="w-4 h-4 text-pink-400" />
@@ -211,7 +211,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
       </div>
 
       {/* Interactive Monthly Calendar */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs">
         {/* Calendar Nav */}
         <div className="flex items-center justify-between mb-6 pb-4 border-b border-rose-100">
           <div className="flex items-center gap-3">
@@ -283,7 +283,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
                     ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
                     : info.isFertile
                     ? 'bg-purple-100/70 text-purple-950 border-purple-200'
-                    : 'bg-white hover:bg-rose-50/40 text-zinc-700 border-zinc-100 hover:border-rose-200'
+                    : 'bg-card hover:bg-rose-50/40 text-zinc-700 border-zinc-100 hover:border-rose-200'
                 } ${isToday ? 'ring-2 ring-rose-500 ring-offset-2' : ''}`}
                 title={`Ajouter des notes pour le ${dayNum}`}
               >
@@ -302,7 +302,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
                   {info.hasLog && (
                     <span
                       className={`w-2 h-2 rounded-full ${
-                        info.isRecordedPeriod || info.isOvulation ? 'bg-white' : 'bg-rose-500'
+                        info.isRecordedPeriod || info.isOvulation ? 'bg-card' : 'bg-rose-500'
                       }`}
                       title="Journal complété"
                     />
@@ -342,7 +342,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
       </div>
 
       {/* History Table of past cycles */}
-      <div className="p-6 rounded-3xl bg-white border border-rose-100 shadow-xs space-y-4">
+      <div className="p-6 rounded-3xl bg-card border border-rose-100 shadow-xs space-y-4">
         <h3 className="text-base font-bold text-zinc-900">
           Mes cycles précédents
         </h3>
@@ -400,7 +400,7 @@ export const CycleView: React.FC<CycleViewProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-rose-950/25 backdrop-blur-xs animate-in fade-in">
           <form
             onSubmit={handleCreateCycle}
-            className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
+            className="w-full max-w-md bg-card rounded-3xl p-6 shadow-2xl border border-rose-100 space-y-4"
           >
             <h3 className="text-base font-bold text-zinc-900">
               Quand tes règles ont-elles commencé ?

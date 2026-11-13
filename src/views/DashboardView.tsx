@@ -135,7 +135,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <span className="text-xl sm:text-2xl font-black text-zinc-900 block tracking-tight">
             {greeting},
           </span>
-          <span className="text-2xl sm:text-3xl font-black text-[#FF5B84] block tracking-tight">
+          <span className="text-2xl sm:text-3xl font-black text-[#e8283c] block tracking-tight">
             {firstName} !
           </span>
           <span className="text-xs text-zinc-400 font-medium flex items-center gap-1 mt-0.5">
@@ -146,7 +146,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* Carte principale : où j'en suis */}
-      <div className="relative overflow-hidden p-6 rounded-3xl bg-linear-to-r from-[#FF98B1] via-[#FF6E91] to-[#FF5479] text-white shadow-lg shadow-rose-200/60">
+      <div className="relative overflow-hidden p-6 rounded-3xl bg-linear-to-r from-[#ff6b5e] via-[#e8283c] to-[#e8283c] text-white shadow-lg shadow-rose-200/60">
         <div className="absolute -right-10 -top-10 text-[120px] opacity-15 leading-none select-none">
           {statusEmoji}
         </div>
@@ -167,7 +167,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <button
             type="button"
             onClick={onQuickLogPeriodStart}
-            className="px-4 py-2.5 rounded-full bg-white hover:bg-rose-50 text-[#FF5B84] text-xs font-black shadow-md transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5"
+            className="px-4 py-2.5 rounded-full bg-white hover:bg-rose-950 text-[#e8283c] text-xs font-black shadow-md transition-all hover:scale-105 active:scale-95 flex items-center gap-1.5"
           >
             <PlusCircle className="w-4 h-4" />
             <span>Mes règles commencent</span>
@@ -175,7 +175,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <button
             type="button"
             onClick={() => onOpenLogModal('flow')}
-            className="px-4 py-2.5 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 text-white text-xs font-black transition-all flex items-center gap-1.5"
+            className="px-4 py-2.5 rounded-full bg-white/20 hover:bg-white/30 border border-zinc-200/40 text-white text-xs font-black transition-all flex items-center gap-1.5"
           >
             <span>Noter ma journée</span>
             <ArrowRight className="w-4 h-4" />
@@ -196,7 +196,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               key={action.label}
               type="button"
               onClick={() => onOpenLogModal(action.tab)}
-              className="p-3 rounded-2xl bg-white border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all flex flex-col items-center text-center group"
+              className="p-3 rounded-2xl bg-card border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all flex flex-col items-center text-center group"
             >
               <div className={`p-2 rounded-xl mb-1.5 group-hover:scale-110 transition-transform ${action.color}`}>
                 <Icon className="w-4 h-4" />
@@ -208,13 +208,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* Ma journée en un coup d'œil */}
-      <div className="p-4 sm:p-5 rounded-3xl bg-white border border-rose-100 shadow-2xs space-y-3">
+      <div className="p-4 sm:p-5 rounded-3xl bg-card border border-rose-100 shadow-2xs space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-extrabold text-zinc-900 tracking-tight">Ma journée</h3>
           <button
             type="button"
             onClick={() => onOpenLogModal('flow')}
-            className="text-[11px] text-[#FF5B84] font-bold flex items-center gap-0.5"
+            className="text-[11px] text-[#e8283c] font-bold flex items-center gap-0.5"
           >
             Compléter <ChevronRight className="w-3 h-3" />
           </button>
@@ -243,7 +243,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* Comment te sens-tu ? */}
-      <div className="p-4 sm:p-5 rounded-3xl bg-white border border-rose-100 shadow-2xs space-y-2.5">
+      <div className="p-4 sm:p-5 rounded-3xl bg-card border border-rose-100 shadow-2xs space-y-2.5">
         <div className="flex items-center justify-between">
           <span className="text-xs font-black text-zinc-900">Comment te sens-tu ?</span>
           <span className="text-[11px] text-zinc-400 font-medium">Un simple appui suffit</span>
@@ -258,7 +258,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 onClick={() => onQuickMoodSelect(m.label)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${
                   selected
-                    ? 'bg-[#FF6584] text-white border-[#FF6584] shadow-xs scale-105'
+                    ? 'bg-[#e8283c] text-white border-[#e8283c] shadow-xs scale-105'
                     : m.color
                 }`}
               >
@@ -271,15 +271,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* Rappels */}
-      <div className="p-4 sm:p-5 rounded-3xl bg-white border border-rose-100 shadow-2xs space-y-3">
+      <div className="p-4 sm:p-5 rounded-3xl bg-card border border-rose-100 shadow-2xs space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-extrabold text-zinc-900 flex items-center gap-2">
-            <Bell className="w-4 h-4 text-[#FF5B84]" /> Mes rappels
+            <Bell className="w-4 h-4 text-[#e8283c]" /> Mes rappels
           </h3>
           <button
             type="button"
             onClick={() => onSelectTab('reminders')}
-            className="text-[11px] text-[#FF5B84] font-bold flex items-center gap-0.5"
+            className="text-[11px] text-[#e8283c] font-bold flex items-center gap-0.5"
           >
             Voir tout <ChevronRight className="w-3 h-3" />
           </button>
@@ -289,7 +289,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="space-y-2">
             {enabledReminders.map(r => (
               <div key={r.id} className="flex items-center gap-3 p-2.5 rounded-2xl bg-rose-50/50 border border-rose-100">
-                <span className="text-xs font-black text-[#FF5B84] bg-white px-2 py-1 rounded-lg border border-rose-100">
+                <span className="text-xs font-black text-[#e8283c] bg-card px-2 py-1 rounded-lg border border-rose-100">
                   {r.time}
                 </span>
                 <span className="text-xs font-semibold text-zinc-700 flex-1 truncate">
@@ -304,7 +304,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <button
               type="button"
               onClick={() => onSelectTab('reminders')}
-              className="mt-2 text-xs font-bold text-[#FF5B84] underline"
+              className="mt-2 text-xs font-bold text-[#e8283c] underline"
             >
               Ajouter un rappel simple
             </button>
@@ -319,7 +319,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <button
             type="button"
             onClick={() => onSelectTab('tools')}
-            className="text-xs text-[#FF5B84] hover:text-[#FF4370] font-bold"
+            className="text-xs text-[#e8283c] hover:text-[#e8283c] font-bold"
           >
             Tout voir
           </button>
@@ -332,10 +332,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 key={tool.label}
                 type="button"
                 onClick={() => onSelectTab('tools')}
-                className="p-4 rounded-3xl bg-white border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all text-left group"
+                className="p-4 rounded-3xl bg-card border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all text-left group"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#FF5B84] flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#e8283c] flex items-center justify-center">
                     <Icon className="w-4 h-4" />
                   </div>
                   <span className="text-lg group-hover:scale-110 transition-transform">{tool.emoji}</span>
@@ -350,7 +350,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
       {/* Pensée douce */}
       <div className="p-4 rounded-3xl bg-rose-50/80 border border-rose-200/70 shadow-2xs flex items-start gap-3.5">
-        <div className="w-10 h-10 rounded-2xl bg-white text-[#FF6584] flex items-center justify-center shrink-0 shadow-2xs">
+        <div className="w-10 h-10 rounded-2xl bg-card text-[#e8283c] flex items-center justify-center shrink-0 shadow-2xs">
           <Sparkles className="w-5 h-5" />
         </div>
         <div className="min-w-0 flex-1">
@@ -374,7 +374,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               key={tile.label}
               type="button"
               onClick={() => onSelectTab(tile.tab)}
-              className="p-3 rounded-2xl bg-white border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all flex flex-col items-center text-center group"
+              className="p-3 rounded-2xl bg-card border border-rose-100 hover:border-rose-300 shadow-2xs hover:shadow-xs transition-all flex flex-col items-center text-center group"
             >
               <div className={`p-2 rounded-xl mb-1.5 group-hover:scale-110 transition-transform ${tile.color}`}>
                 <Icon className="w-4 h-4" />
