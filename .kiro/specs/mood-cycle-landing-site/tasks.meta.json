@@ -1,0 +1,409 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Setup et configuration initiale du projet": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267500741
+      },
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267514691
+      }
+    ],
+    "2. Extraction des informations de l'application existante": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267500821
+      }
+    ],
+    "3. Créer la configuration centrale (src/config.ts)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267500897
+      }
+    ],
+    "4. Créer les types TypeScript (src/types/index.ts)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267500948
+      }
+    ],
+    "5. Setup des styles globaux et Tailwind": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267500995
+      }
+    ],
+    "6. Créer le composant Navigation (layout/Navigation.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501049
+      }
+    ],
+    "7. Créer le composant Footer (layout/Footer.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501117
+      }
+    ],
+    "8. Créer le composant Card (ui/Card.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501164
+      }
+    ],
+    "9. Créer le composant Button (ui/Button.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501211
+      }
+    ],
+    "10. Créer le composant Badge (ui/Badge.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501255
+      }
+    ],
+    "11. Créer le composant Accordion (ui/Accordion.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501305
+      }
+    ],
+    "12. Créer le composant PhaseWheel (ui/PhaseWheel.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501356
+      }
+    ],
+    "13. Créer le service webgl-detector.ts": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501433
+      }
+    ],
+    "14. Créer le service scroll-observer.ts": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501473
+      }
+    ],
+    "15. Créer la section Hero (sections/Hero.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501516
+      }
+    ],
+    "16. Créer la section CyclePhases (sections/CyclePhases.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501561
+      }
+    ],
+    "17. Créer les données Features (sections/features-data.ts)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501603
+      }
+    ],
+    "18. Créer la section Features (sections/Features.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501646
+      }
+    ],
+    "19. Créer la section HowItWorks (sections/HowItWorks.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501704
+      }
+    ],
+    "20. Créer la section Privacy (sections/Privacy.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501762
+      }
+    ],
+    "21. Créer les données FAQ (sections/faq-data.ts)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501802
+      }
+    ],
+    "22. Créer la section FAQ (sections/FAQ.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501846
+      }
+    ],
+    "23. Créer la section FinalCTA (sections/FinalCTA.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501885
+      }
+    ],
+    "24. Checkpoint - Vérifier les sections statiques": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501928
+      }
+    ],
+    "25. Créer le composant HeroCanvas (3d/HeroCanvas.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267501968
+      }
+    ],
+    "26. Créer le composant WebGLFallback (3d/WebGLFallback.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502013
+      }
+    ],
+    "27. Créer le composant Lights (3d/Lights.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502093
+      }
+    ],
+    "28. Créer le composant Rim (3d/Rim.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502132
+      }
+    ],
+    "29. Créer le composant Eye (3d/Eye.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502173
+      }
+    ],
+    "30. Créer le composant Orb (3d/Orb.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502217
+      }
+    ],
+    "31. Créer le composant CycleRing (3d/CycleRing.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502262
+      }
+    ],
+    "32. Créer le composant Drops (3d/Drops.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502305
+      }
+    ],
+    "33. Créer le composant Rig (3d/Rig.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502620
+      }
+    ],
+    "34. Créer le post-processing Bloom": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502692
+      }
+    ],
+    "35. Intégrer tous les composants 3D dans HeroCanvas": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502758
+      }
+    ],
+    "36. Checkpoint - Vérifier la scène 3D": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502821
+      }
+    ],
+    "37. Créer le Router et les pages (App.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502892
+      }
+    ],
+    "38. Créer la page HomePage (pages/HomePage.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267502963
+      }
+    ],
+    "39. Créer la page PrivacyPage (pages/PrivacyPage.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503033
+      }
+    ],
+    "40. Créer la page NotFoundPage (pages/NotFoundPage.tsx)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503098
+      }
+    ],
+    "41. Implémenter le scroll vers sections": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503167
+      }
+    ],
+    "42. Implémenter scroll to top sur changement de route": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503272
+      }
+    ],
+    "43. Ajouter la gestion prefers-reduced-motion globale": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503334
+      }
+    ],
+    "44. Optimiser les performances": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503403
+      }
+    ],
+    "45. Créer les assets SEO": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503466
+      }
+    ],
+    "46. Ajouter les meta tags SEO dans index.html": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503533
+      }
+    ],
+    "47. Configurer Tailwind avec thème personnalisé": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503601
+      }
+    ],
+    "48. Implémenter l'accessibilité complète": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503673
+      }
+    ],
+    "49. Créer vercel.json pour le déploiement": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503747
+      }
+    ],
+    "50. Créer README.md complet": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503817
+      }
+    ],
+    "51. Initialiser le dépôt Git": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503884
+      }
+    ],
+    "52. Créer le dépôt GitHub public": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267503952
+      }
+    ],
+    "53. Tests de performance avec Lighthouse": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267504019
+      }
+    ],
+    "54. Tests responsive sur toutes tailles": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267504091
+      }
+    ],
+    "55. Tests d'accessibilité automatisés": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267504157
+      }
+    ],
+    "56. Créer le rapport d'extraction final (EXTRACTION_REPORT.md)": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267504231
+      }
+    ],
+    "57. Checkpoint final - Vérification complète": [
+      {
+        "executionId": "f26dc3c9-3bda-4d17-92fe-eac76578b608",
+        "chatSessionId": "sess_ff80834c-17bd-476a-864d-1cc35c15c7f5",
+        "timestamp": 1794267504300
+      }
+    ]
+  }
+}

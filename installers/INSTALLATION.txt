@@ -1,0 +1,66 @@
+MOOD JARDIN — COMMENT INSTALLER L’APPLICATION
+=============================================
+
+Tes données restent sur ton appareil.
+Pas de compte, pas de publicité, pas de jugement.
+
+Les deux fichiers d’installation sont dans le dossier « installers » :
+- « Mood Jardin Setup 1.0.0.exe » pour Windows
+- « Mood Jardin 1.0.0.apk » pour Android
+
+
+1. SUR WINDOWS
+--------------
+
+1. Ouvre le dossier « installers ».
+2. Double-clique sur « Mood Jardin Setup 1.0.0.exe ».
+3. Si Windows affiche un avertissement bleu, clique sur
+   « Informations complémentaires », puis « Exécuter quand même ».
+4. Clique sur « Suivant ».
+5. Choisis le dossier si tu veux, puis clique sur « Installer ».
+6. Une icône « Mood Jardin » apparaît sur ton bureau.
+
+Pour désinstaller plus tard :
+Paramètres Windows > Applications > Mood Jardin > Désinstaller.
+
+
+2. SUR ANDROID
+--------------
+
+1. Dans le dossier « installers », copie le fichier
+   « Mood Jardin 1.0.0.apk » sur ton téléphone
+   (par câble, par email ou par un service de transfert).
+2. Ouvre le fichier avec l’application « Fichiers » de ton téléphone.
+3. Si Android demande d’autoriser les applications inconnues,
+   accepte pour cette installation.
+4. Appuie sur « Installer », puis ouvre « Mood Jardin ».
+
+Si ton téléphone bloque l’installation :
+Paramètres > Sécurité > Installer des applications inconnues,
+puis autorise l’application « Fichiers ».
+
+
+3. PREMIERS PAS
+---------------
+
+- Tu peux noter seulement ce que tu veux.
+- Rien n’est obligatoire.
+- Le bouton « Noter ma journée » sert à ajouter tes règles,
+  tes douleurs, ton humeur ou ton journal.
+- Le bouton « Mes outils » propose la respiration, l’eau,
+  la checklist du soir et les numéros utiles.
+- Les dates affichées sont des estimations.
+  Elles ne remplacent pas une contraception ni un avis médical.
+
+
+4. EN CAS DE DOUTE MÉDICAL
+--------------------------
+
+En France :
+- 15 : SAMU
+- 112 : urgences européennes
+- 3114 : prévention du suicide, 24 h/24
+- 3919 : violences faites aux femmes
+
+Ce ne sont pas des numéros de l’application :
+ce sont les numéros d’urgence officiels.
