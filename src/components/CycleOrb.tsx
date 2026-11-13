@@ -6,11 +6,11 @@ type PhaseInfo = { phase: CyclePhase; title: string; description: string; care: 
 
 const phaseForDay = (day: number, totalDays: number, periodDays: number): PhaseInfo => {
   const ovulationDay = Math.max(8, totalDays - 14);
-  if (day <= periodDays) return { phase: 'menstrual', title: 'Règles', description: 'Ton corps se repose. C’est normal d’avoir moins d’énergie.', care: 'Chaleur, repos, eau : fais ce qui te fait du bien.' };
-  if (day < ovulationDay - 5) return { phase: 'follicular', title: 'L’énergie revient', description: 'Après les règles, l’énergie remonte petit à petit.', care: 'Profite de cet élan, sans te mettre de pression.' };
-  if (day < ovulationDay) return { phase: 'fertile', title: 'Fenêtre fertile', description: 'Estimation : une grossesse est possible ces jours-ci.', care: 'Si tu veux éviter ou avoir un bébé, demande conseil à un professionnel.' };
-  if (day === ovulationDay) return { phase: 'ovulation', title: 'Ovulation estimée', description: 'Le jour où une grossesse a le plus de chances de commencer.', care: 'Une estimation ne remplace ni un test ni un médecin.' };
-  return { phase: 'luteal', title: 'Avant les règles', description: 'Le corps ralentit. Fatigue ou irritabilité sont fréquentes.', care: 'Accorde-toi du temps et note ce qui t’aide.' };
+  if (day <= periodDays) return { phase: 'menstrual', title: 'Phase menstruelle', description: 'Les règles : l’endomètre s’évacue, les hormones sont au plus bas. Ton corps se repose. C’est normal d’avoir moins d’énergie.', care: 'Chaleur, repos, eau : fais ce qui te fait du bien.' };
+  if (day < ovulationDay - 5) return { phase: 'follicular', title: 'Phase folliculaire', description: 'Les œstrogènes remontent, un follicule mûrit dans l’ovaire : l’énergie revient.', care: 'Profite de cet élan, sans te mettre de pression.' };
+  if (day < ovulationDay) return { phase: 'fertile', title: 'Fenêtre fertile', description: 'Fin de la phase folliculaire : l’ovulation approche, une grossesse est possible ces jours-ci (estimation).', care: 'Si tu veux éviter ou avoir un bébé, demande conseil à un professionnel.' };
+  if (day === ovulationDay) return { phase: 'ovulation', title: 'Phase ovulatoire', description: 'Pic de LH : l’ovule est libéré et vit 12 à 24 h. C’est le jour le plus fertile (estimation).', care: 'Une estimation ne remplace ni un test ni un médecin.' };
+  return { phase: 'luteal', title: 'Phase lutéale', description: 'Le corps jaune produit de la progestérone. Avant les règles, fatigue ou irritabilité sont fréquentes.', care: 'Accorde-toi du temps et note ce qui t’aide.' };
 };
 
 const R = 92, C = 2 * Math.PI * R;
@@ -24,10 +24,10 @@ export const Orb: React.FC<{ day?: number; total?: number; periodDays?: number; 
     <div className="relative mx-auto" style={{ width: size, height: size }}>
       <svg viewBox="0 0 220 220" className="absolute inset-0 h-full w-full -rotate-90 overflow-visible">
         <circle cx="110" cy="110" r={R} fill="none" stroke="rgba(255,255,255,.14)" strokeWidth="2" />
-        <circle cx="110" cy="110" r={R} fill="none" stroke="#e8283c" strokeWidth="7" strokeLinecap="round" style={arc(1, periodDays, total)} />
-        <circle cx="110" cy="110" r={R} fill="none" stroke="#ffb27a" strokeWidth="4" strokeLinecap="round" style={arc(ov - 5, 6, total)} />
+        <circle cx="110" cy="110" r={R} fill="none" stroke="#ff2e7e" strokeWidth="7" strokeLinecap="round" style={arc(1, periodDays, total)} />
+        <circle cx="110" cy="110" r={R} fill="none" stroke="#ffb6d2" strokeWidth="4" strokeLinecap="round" style={arc(ov - 5, 6, total)} />
       </svg>
-      {day && <span className="absolute h-3.5 w-3.5 -ml-[7px] -mt-[7px] rounded-full bg-white shadow-[0_0_0_5px_rgba(232,40,60,.7)]" style={{ left: `${50 + (R / 220) * 100 * Math.cos(a)}%`, top: `${50 + (R / 220) * 100 * Math.sin(a)}%` }} />}
+      {day && <span className="absolute h-3.5 w-3.5 -ml-[7px] -mt-[7px] rounded-full bg-white shadow-[0_0_0_5px_rgba(255,46,126,.7)]" style={{ left: `${50 + (R / 220) * 100 * Math.cos(a)}%`, top: `${50 + (R / 220) * 100 * Math.sin(a)}%` }} />}
       <div className="orb absolute inset-[22%] rounded-full" />
       {label !== undefined && <div className="absolute inset-0 grid place-items-center text-center pointer-events-none"><div><p className="text-[10px] font-semibold uppercase tracking-[.18em] text-white/80">{label}</p>{day && <p className="text-4xl font-black leading-none tracking-tight text-white">J{day}</p>}</div></div>}
     </div>
@@ -60,8 +60,8 @@ export const CycleOrb: React.FC<CycleOrbProps> = ({ stats, onOpenLogModal, onQui
       <div className="my-4"><Orb day={stats.hasCycleData ? day : undefined} total={totalDays} periodDays={periodDays} label={stats.hasCycleData ? `sur ${totalDays}` : 'Bienvenue'} /></div>
 
       <div className="flex flex-wrap items-center justify-center gap-4 text-[10px] font-semibold uppercase tracking-[.14em] text-zinc-600">
-        <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full bg-[#e8283c]" />Règles</span>
-        <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full bg-[#ffb27a]" />Fenêtre fertile</span>
+        <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full bg-[#ff2e7e]" />Règles</span>
+        <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full bg-[#ffb6d2]" />Fenêtre fertile</span>
         <span className="flex items-center gap-1.5"><i className="h-2 w-2 rounded-full bg-white" />Jour affiché</span>
       </div>
 
@@ -72,15 +72,15 @@ export const CycleOrb: React.FC<CycleOrbProps> = ({ stats, onOpenLogModal, onQui
       </div>
 
       {stats.hasCycleData && <div className="mt-4">
-        <input aria-label="Choisir un jour du cycle" type="range" min="1" max={totalDays} value={day} onChange={e => { setPreviewing(true); setSelectedDay(Number(e.target.value)); }} className="w-full accent-[#e8283c]" />
-        <div className="mt-2 grid grid-cols-4 gap-1.5">{([['menstrual', 'Règles'], ['follicular', 'Après'], ['ovulation', 'Fertile'], ['luteal', 'Avant']] as const).map(([name, label]) =>
-          <button key={name} type="button" onClick={() => jumpTo(name)} className={`rounded-lg px-1 py-2 text-[10px] font-semibold uppercase tracking-wider transition ${phase.phase === name || (name === 'ovulation' && phase.phase === 'fertile') ? 'bg-[#e8283c] text-white' : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'}`}>{label}</button>)}
+        <input aria-label="Choisir un jour du cycle" type="range" min="1" max={totalDays} value={day} onChange={e => { setPreviewing(true); setSelectedDay(Number(e.target.value)); }} className="w-full accent-[#ff2e7e]" />
+        <div className="mt-2 grid grid-cols-4 gap-1.5">{([['menstrual', 'Menstruelle'], ['follicular', 'Folliculaire'], ['ovulation', 'Ovulatoire'], ['luteal', 'Lutéale']] as const).map(([name, label]) =>
+          <button key={name} type="button" onClick={() => jumpTo(name)} className={`rounded-lg px-0.5 py-2 text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider transition ${phase.phase === name || (name === 'ovulation' && phase.phase === 'fertile') ? 'bg-[#ff2e7e] text-white' : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'}`}>{label}</button>)}
         </div>
       </div>}
 
       {showDetails && <div className="mt-4 flex gap-2 border-t border-zinc-200 pt-4">
         {onOpenLogModal && <button type="button" onClick={onOpenLogModal} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-zinc-300 px-3 py-3 text-xs font-semibold uppercase tracking-wider text-zinc-800"><Sparkles className="h-3.5 w-3.5" /> Noter ma journée</button>}
-        {onQuickLogPeriodStart && <button type="button" onClick={onQuickLogPeriodStart} className="flex items-center justify-center gap-1.5 rounded-lg bg-[#e8283c] px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#c41426]"><Droplet className="h-3.5 w-3.5" /> Mes règles commencent</button>}
+        {onQuickLogPeriodStart && <button type="button" onClick={onQuickLogPeriodStart} className="flex items-center justify-center gap-1.5 rounded-lg bg-[#ff2e7e] px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#d41b66]"><Droplet className="h-3.5 w-3.5" /> Mes règles commencent</button>}
       </div>}
     </section>
   );

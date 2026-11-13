@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  MessageCircle,
   Home,
   CalendarDays,
   Heart,
@@ -29,6 +30,7 @@ export type NavTabId =
   | 'reminders'
   | 'normality'
   | 'encyclopedia'
+  | 'assistant'
   | 'fertility'
   | 'healthRecords'
   | 'statistics'
@@ -67,6 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const LEARN_ITEMS: Array<{ id: NavTabId; label: string; icon: any }> = [
     { id: 'normality', label: t.nav.normality, icon: HelpCircle },
     { id: 'encyclopedia', label: t.nav.encyclopedia, icon: BookOpen },
+    { id: 'assistant', label: t.nav.assistant, icon: MessageCircle },
     { id: 'fertility', label: t.nav.fertility, icon: Baby },
     { id: 'statistics', label: t.nav.statistics, icon: TrendingUp },
     { id: 'healthRecords', label: t.nav.healthRecords, icon: FileText }
@@ -84,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         title={isSidebarCollapsed ? item.label : undefined}
         className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all ${
           active
-            ? 'bg-[#e8283c] text-white shadow-md shadow-rose-300/50 scale-[1.01]'
+            ? 'bg-[#ff2e7e] text-white shadow-md shadow-rose-300/50 scale-[1.01]'
             : 'text-zinc-600 hover:text-zinc-900 hover:bg-rose-100/60'
         }`}
       >
@@ -105,12 +108,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center justify-between p-4 border-b border-rose-100">
           {!isSidebarCollapsed && (
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff6b5e] to-[#e8283c] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-rose-200">
+              <div className="w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff8db8] to-[#ff2e7e] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-rose-200">
                 ✨
               </div>
               <div>
                 <h1 className="text-lg font-black text-zinc-900 tracking-tight leading-none">Mood</h1>
-                <span className="text-[10px] text-[#e8283c] font-extrabold tracking-wider uppercase">
+                <span className="text-[10px] text-[#ff2e7e] font-extrabold tracking-wider uppercase">
                   {discreteMode ? 'Espace privé' : 'Mon espace'}
                 </span>
               </div>
@@ -118,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           )}
 
           {isSidebarCollapsed && (
-            <div className="mx-auto w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff6b5e] to-[#e8283c] text-white flex items-center justify-center font-bold shadow-md">
+            <div className="mx-auto w-10 h-10 rounded-2xl bg-linear-to-tr from-[#ff8db8] to-[#ff2e7e] text-white flex items-center justify-center font-bold shadow-md">
               ✨
             </div>
           )}
@@ -158,7 +161,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={onOpenQuickAdd}
-              className="w-full py-3 rounded-2xl bg-linear-to-r from-[#ff6b5e] to-[#e8283c] text-white text-xs font-extrabold shadow-md shadow-rose-200 flex items-center justify-center gap-2 hover:opacity-95 transition-all"
+              className="w-full py-3 rounded-2xl bg-linear-to-r from-[#ff8db8] to-[#ff2e7e] text-white text-xs font-extrabold shadow-md shadow-rose-200 flex items-center justify-center gap-2 hover:opacity-95 transition-all"
             >
               <Plus className="w-4 h-4 stroke-[3]" />
               <span>Noter ma journée</span>
@@ -174,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('home')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'home' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
+              currentTab === 'home' ? 'text-[#ff2e7e] font-black' : 'text-zinc-400'
             }`}
           >
             <Home className="w-5 h-5" />
@@ -185,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('cycle')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'cycle' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
+              currentTab === 'cycle' ? 'text-[#ff2e7e] font-black' : 'text-zinc-400'
             }`}
           >
             <CalendarDays className="w-5 h-5" />
@@ -196,7 +199,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={onOpenQuickAdd}
-              className="w-13 h-13 rounded-full bg-[#e8283c] hover:bg-[#c41426] active:scale-95 text-white flex items-center justify-center shadow-lg shadow-rose-400/60 transition-all border-4 border-zinc-200"
+              className="w-13 h-13 rounded-full bg-[#ff2e7e] hover:bg-[#d41b66] active:scale-95 text-white flex items-center justify-center shadow-lg shadow-rose-400/60 transition-all border-4 border-zinc-200"
               title="Noter ma journée"
             >
               <Plus className="w-6 h-6 stroke-[3]" />
@@ -207,7 +210,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('tools')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'tools' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
+              currentTab === 'tools' ? 'text-[#ff2e7e] font-black' : 'text-zinc-400'
             }`}
           >
             <Sparkles className="w-5 h-5" />
@@ -218,7 +221,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             onClick={() => onSelectTab('profile')}
             className={`flex flex-col items-center justify-center py-1 transition-all ${
-              currentTab === 'profile' ? 'text-[#e8283c] font-black' : 'text-zinc-400'
+              currentTab === 'profile' ? 'text-[#ff2e7e] font-black' : 'text-zinc-400'
             }`}
           >
             <User className="w-5 h-5" />

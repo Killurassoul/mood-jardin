@@ -157,7 +157,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
       <div className="p-5 sm:p-6 rounded-3xl bg-linear-to-b from-rose-50 via-pink-50/60 to-card border border-rose-200/70 shadow-xs space-y-4">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-card text-[#e8283c] flex items-center justify-center shadow-2xs">
+            <div className="w-10 h-10 rounded-2xl bg-card text-[#ff2e7e] flex items-center justify-center shadow-2xs">
               <Wind className="w-5 h-5" />
             </div>
             <div>
@@ -173,7 +173,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
         <div className="flex flex-col items-center py-2">
           <div className="relative w-40 h-40 flex items-center justify-center">
             <div
-              className="absolute rounded-full bg-[#ff6b5e]/50 border border-[#ff6b5e]"
+              className="absolute rounded-full bg-[#ff8db8]/50 border border-[#ff8db8]"
               style={{
                 width: '100%',
                 height: '100%',
@@ -189,7 +189,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
               }}
             />
             <div className="relative z-10 text-center">
-              <span className="text-3xl font-black text-[#e8283c] block leading-none">
+              <span className="text-3xl font-black text-[#ff2e7e] block leading-none">
                 {breathing ? breathSeconds : '🌸'}
               </span>
               <span className="text-[11px] font-bold text-rose-700 block mt-1 max-w-[120px]">
@@ -204,7 +204,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
             className={`mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-black text-white shadow-md transition-all ${
               breathing
                 ? 'bg-zinc-700 hover:bg-zinc-800'
-                : 'bg-[#e8283c] hover:bg-[#c41426] shadow-rose-200'
+                : 'bg-[#ff2e7e] hover:bg-[#d41b66] shadow-rose-200'
             }`}
           >
             {breathing ? <Square className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -309,7 +309,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
       {/* Note rapide */}
       <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-2xs space-y-3">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#e8283c] flex items-center justify-center">
+          <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#ff2e7e] flex items-center justify-center">
             <Sparkles className="w-4 h-4" />
           </div>
           <div>
@@ -329,7 +329,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
           <button
             type="button"
             onClick={saveNote}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#e8283c] hover:bg-[#c41426] text-white text-xs font-bold shadow-md shadow-rose-200"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#ff2e7e] hover:bg-[#d41b66] text-white text-xs font-bold shadow-md shadow-rose-200"
           >
             {noteSaved ? <CheckCircle2 className="w-3.5 h-3.5" /> : <Save className="w-3.5 h-3.5" />}
             {noteSaved ? 'Noté !' : 'Enregistrer'}
@@ -356,7 +356,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
       {/* Numéros utiles */}
       <div className="p-5 rounded-3xl bg-card border border-rose-100 shadow-2xs space-y-3">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#e8283c] flex items-center justify-center">
+          <div className="w-9 h-9 rounded-2xl bg-rose-50 text-[#ff2e7e] flex items-center justify-center">
             <Phone className="w-4 h-4" />
           </div>
           <div>
@@ -372,7 +372,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
               href={`tel:${item.number}`}
               className="p-3 rounded-2xl bg-rose-50/60 border border-rose-100 hover:bg-rose-50 transition-colors"
             >
-              <span className="text-lg font-black text-[#e8283c] block">{item.number}</span>
+              <span className="text-lg font-black text-[#ff2e7e] block">{item.number}</span>
               <span className="text-[11px] font-bold text-zinc-800 block">{item.label}</span>
               <span className="text-[10px] text-zinc-500 block mt-0.5">{item.desc}</span>
             </a>
@@ -389,7 +389,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
       <button
         type="button"
         onClick={onOpenLogModal}
-        className="w-full py-3.5 rounded-3xl bg-[#e8283c] hover:bg-[#c41426] text-white text-xs font-black shadow-lg shadow-rose-200 transition-all flex items-center justify-center gap-2"
+        className="w-full py-3.5 rounded-3xl bg-[#ff2e7e] hover:bg-[#d41b66] text-white text-xs font-black shadow-lg shadow-rose-200 transition-all flex items-center justify-center gap-2"
       >
         <CheckCircle2 className="w-4 h-4" />
         Noter ma journée complète

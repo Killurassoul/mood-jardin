@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mood Jardin | Ton cycle, enfin à toi</title>
-<meta name="description" content="Mood Jardin : suivi des règles, prévisions, fenêtre fertile, rappels sur ton téléphone, journal et dossier santé pour ton médecin. Sans compte, sans pub. Gratuit pour Android et Windows.">
-<meta name="theme-color" content="#2a0d04">
+<meta name="description" content="Mood Jardin : les 4 phases du cycle expliquées, une encyclopédie complète sur les règles, Dayana pour répondre à tes questions, suivi des règles, prévisions, fenêtre fertile, rappels sur ton téléphone, journal et dossier santé pour ton médecin. Sans compte, sans pub. Gratuit pour Android et Windows.">
+<meta name="theme-color" content="#2a0616">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--red:#e8283c;--deep:#2a0d04}
+:root{--red:#ff2e7e;--deep:#2a0616}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden;background:var(--deep);color:#fff;font-family:Montserrat,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-.hero{position:fixed;inset:0;overflow:hidden;background:radial-gradient(58% 72% at 50% 47%,#d0591f 0%,#a23f12 32%,#6b2409 62%,#3b1405 100%)}
+.hero{position:fixed;inset:0;overflow:hidden;background:radial-gradient(58% 72% at 50% 47%,#ff5c9a 0%,#d42a78 32%,#8a1450 62%,#3d0a24 100%)}
 .hero>*{position:absolute}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
@@ -24,10 +24,10 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 #gl{inset:0;width:100%;height:100%;z-index:4;cursor:grab;touch-action:none}
 #gl.drag{cursor:grabbing}
 #dust{inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
-#flare{z-index:1;width:44vmin;height:44vmin;margin:-22vmin;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgba(255,236,205,.95),rgba(255,176,96,.42) 26%,rgba(255,140,60,.1) 58%,transparent)}
+#flare{z-index:1;width:44vmin;height:44vmin;margin:-22vmin;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgba(255,228,240,.95),rgba(255,140,190,.42) 26%,rgba(255,90,160,.1) 58%,transparent)}
 
 #pin{z-index:6;left:0;top:0;display:flex;align-items:center;gap:9px;font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;pointer-events:none;white-space:nowrap}
-#pin i{width:12px;height:12px;border-radius:50%;background:#fff;position:relative;box-shadow:0 0 0 4px rgba(232,40,60,.75)}
+#pin i{width:12px;height:12px;border-radius:50%;background:#fff;position:relative;box-shadow:0 0 0 4px rgba(255,46,126,.75)}
 #pin i::after{content:"";position:absolute;inset:-13px;border-radius:50%;border:1px solid #fff;animation:pulse 2s ease-out infinite}
 @keyframes pulse{from{transform:scale(.4);opacity:1}to{transform:scale(1.4);opacity:0}}
 
@@ -40,28 +40,32 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 #sites li.on{font-size:15px}
 #sites li.on::after{transform:scale(1.5);box-shadow:0 0 0 7px rgba(255,255,255,.28)}
 #sites li small{display:block;font-weight:400;font-size:10px;letter-spacing:.04em;text-transform:none;opacity:.75;margin-top:4px;max-width:190px;margin-left:auto}
-#card{right:calc(6.2% + 256px);top:0;z-index:7;width:clamp(170px,15.5vw,250px);aspect-ratio:1.42;background:center/cover no-repeat;border-radius:3px;box-shadow:0 22px 44px rgba(20,4,0,.45);overflow:visible}
-#card a{position:absolute;left:-26px;bottom:18%;background:var(--red);font-weight:600;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;padding:9px 15px;border-radius:2px;box-shadow:0 8px 18px rgba(120,10,20,.45)}
+#card{right:calc(6.2% + 256px);top:0;z-index:7;width:clamp(230px,19vw,300px);padding:20px 20px 44px;background:rgba(255,242,248,.97);color:#3d0a24;border-radius:3px;box-shadow:0 22px 44px rgba(40,2,20,.45);overflow:visible}
+#card .d{font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+#card h3{font-weight:800;font-size:21px;letter-spacing:-.01em;margin:6px 0 8px}
+#card .t{font-size:12px;line-height:1.55}
+#card ul{margin-top:10px;padding-left:15px;font-size:11px;line-height:1.55;color:#7a2d55}
+#card a{position:absolute;left:-26px;bottom:-14px;color:#fff;background:var(--red);font-weight:600;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;padding:9px 15px;border-radius:2px;box-shadow:0 8px 18px rgba(140,10,70,.45)}
 
 #region{left:50%;top:50%;z-index:7;transform:translate(-50%,-50%);font-weight:500;font-size:clamp(26px,3.4vw,54px);letter-spacing:.04em;pointer-events:none;white-space:nowrap}
 
-#land,#fore{inset:0;background-size:cover;background-repeat:no-repeat}
+#land,#fore{inset:0;background-size:cover;background-repeat:no-repeat;filter:hue-rotate(-42deg) saturate(1.15)}
 #land{z-index:8;background-position:50% 60%;will-change:transform}
 #dest{left:0;right:0;top:0;z-index:9;text-align:center;pointer-events:none}
 #dest small{display:block;font-weight:300;font-size:min(5.2vw,11vh);line-height:1;letter-spacing:.04em;text-transform:uppercase;opacity:.92}
-#dest b{display:block;margin-top:.04em;font-weight:900;font-size:min(9.2vw,19vh);line-height:1;letter-spacing:-.03em;text-transform:uppercase;white-space:nowrap;color:#fff4e6}
+#dest b{display:block;margin-top:.04em;font-weight:900;font-size:min(9.2vw,19vh);line-height:1;letter-spacing:-.03em;text-transform:uppercase;white-space:nowrap;color:#fff0f6}
 #fore{z-index:10;background-position:50% 100%;will-change:transform}
-#fog{inset:0;z-index:11;pointer-events:none;background:radial-gradient(70% 64% at 50% 46%,#fbe6cd 0%,#f6d3ae 52%,#b36a37 100%)}
+#fog{inset:0;z-index:11;pointer-events:none;background:radial-gradient(70% 64% at 50% 46%,#ffe8f2 0%,#ffc8df 52%,#c2185b 100%)}
 
-#scrim{left:0;right:0;top:0;height:150px;z-index:13;pointer-events:none;background:linear-gradient(rgba(44,14,3,.62),rgba(44,14,3,0))}
-#bar{left:50%;bottom:7.5vh;z-index:12;width:min(86vw,920px);display:grid;grid-template-columns:1fr 1fr 1fr 68px;background:#fff;color:#2b1a12;border-radius:3px;box-shadow:0 24px 60px rgba(30,6,0,.5)}
-#bar div{padding:15px 22px;border-right:1px solid #eadfd6}
-#bar label{display:block;font-weight:500;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#9a877b}
-#bar .v{display:block;width:100%;margin-top:5px;font:600 15px Montserrat,sans-serif;color:#2b1a12}
+#scrim{left:0;right:0;top:0;height:150px;z-index:13;pointer-events:none;background:linear-gradient(rgba(60,6,30,.62),rgba(60,6,30,0))}
+#bar{left:50%;bottom:7.5vh;z-index:12;width:min(86vw,920px);display:grid;grid-template-columns:1fr 1fr 1fr 68px;background:#fff;color:#3d0a24;border-radius:3px;box-shadow:0 24px 60px rgba(50,2,24,.5)}
+#bar div{padding:15px 22px;border-right:1px solid #f4dde8}
+#bar label{display:block;font-weight:500;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#b06a8e}
+#bar .v{display:block;width:100%;margin-top:5px;font:600 15px Montserrat,sans-serif;color:#3d0a24}
 #bar a.v:hover{color:var(--red)}
 #bar a.v.mine::after{content:" · pour toi";font-weight:500;font-size:11px;color:var(--red)}
 #bar button{background:var(--red);color:#fff;border-radius:0 3px 3px 0;font-size:22px;transition:background .25s}
-#bar button:hover{background:#c41426}
+#bar button:hover{background:#d41b66}
 
 header{left:0;right:0;top:0;z-index:20;display:flex;align-items:center;padding:clamp(18px,3.2vh,30px) clamp(20px,2.6vw,42px);font-size:11.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;pointer-events:none}
 header>*{pointer-events:auto}
@@ -84,12 +88,14 @@ header a:hover{opacity:1}
   #word1{font-size:15vw}
   #sites{right:18px;top:auto;bottom:11vh;transform:none;gap:22px}
   #sites li small{display:none}
-  #card{right:auto;left:18px;top:auto!important;bottom:11vh;width:42vw}
+  #card{right:auto;left:18px;top:auto!important;bottom:11vh;width:46vw;padding:14px 14px 40px}
+  #card ul{display:none}
+  #card h3{font-size:17px}#card .t{font-size:11px}
   #card a{left:8px;bottom:8px}
   #dest b{font-size:11vw}#dest small{font-size:7vw}
   #bar{grid-template-columns:1fr 1fr;width:calc(100vw - 32px);bottom:4vh}
   #bar div:nth-child(2){border-right:0}
-  #bar div{padding:11px 14px;border-bottom:1px solid #eadfd6}
+  #bar div{padding:11px 14px;border-bottom:1px solid #f4dde8}
   #bar button{height:46px;border-radius:0 0 3px 0}
   #hint,#rail{display:none}
   #fore{background-size:210% auto}
@@ -105,27 +111,27 @@ header a:hover{opacity:1}
   <canvas id="gl" aria-label="Planète : fais-la tourner, clique pour avancer"></canvas>
   <canvas id="dust"></canvas>
   <div id="pin"><i></i><span>Ton cycle</span></div>
-  <div id="word1" aria-hidden="true">TOUT EN UN</div>
+  <div id="word1" aria-hidden="true">4 PHASES</div>
   <ul id="sites"></ul>
-  <div id="card"><a href="#" id="explore">Télécharger</a></div>
+  <div id="card"><p class="d"></p><h3></h3><p class="t"></p><ul></ul><a href="#" id="explore">Télécharger</a></div>
   <div id="region"></div>
   <div id="land"></div>
-  <div id="dest"><small>Mood Jardin 1.1</small><b>Télécharger</b></div>
+  <div id="dest"><small>Mood Jardin 1.2</small><b>Télécharger</b></div>
   <div id="fore"></div>
   <div id="fog"></div>
   <div id="scrim"></div>
   <form id="bar" onsubmit="return false">
-    <div><label>Android · APK 4 Mo</label><a class="v" id="dlA" href="downloads/Mood-Jardin-1.1.0.apk" download>Téléphone</a></div>
-    <div><label>Windows · 126 Mo</label><a class="v" id="dlW" href="https://github.com/Killurassoul/mood-jardin/releases/latest/download/Mood-Jardin-Setup-1.1.0.exe">Ordinateur</a></div>
-    <div><label>Version 1.1.0</label><span class="v">Gratuit · sans compte</span></div>
+    <div><label>Android · APK 4 Mo</label><a class="v" id="dlA" href="downloads/Mood-Jardin-1.2.0.apk" download>Téléphone</a></div>
+    <div><label>Windows · 126 Mo</label><a class="v" id="dlW" href="https://github.com/Killurassoul/mood-jardin/releases/latest/download/Mood-Jardin-Setup-1.2.0.exe">Ordinateur</a></div>
+    <div><label>1.2.0 · 37 fiches · Dayana</label><span class="v">Gratuit · sans compte</span></div>
     <button id="dlGo" aria-label="Télécharger pour mon appareil">↓</button>
   </form>
   <header>
     <a class="logo" href="#" id="home" style="margin-left:0;opacity:1"><svg viewBox="0 0 34 30" fill="none" stroke="#fff" stroke-linecap="round"><path stroke-width="3.2" d="M3 27C5 13 15 4 31 3"/><path stroke-width="2" d="M11 27c1.5-8 8-14 18-15"/><circle cx="30" cy="20" r="3.5" fill="#fff" stroke="none"/></svg>Mood Jardin</a>
-    <a href="#" data-go="1">Fonctionnalités</a><a href="#" data-go="2">Télécharger</a>
+    <a href="#" data-go="1">Les 4 phases</a><a href="#" data-go="2">Télécharger</a>
     <button class="ico" aria-label="Aller au téléchargement" data-go="2"><svg viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></button>
   </header>
-  <div id="rail"><button aria-label="Accueil"></button><button aria-label="Fonctionnalités"></button><button aria-label="Télécharger"></button></div>
+  <div id="rail"><button aria-label="Accueil"></button><button aria-label="Les 4 phases"></button><button aria-label="Télécharger"></button></div>
   <div id="hint">Fais tourner la planète · clique pour descendre</div>
 </main>
 
@@ -139,10 +145,10 @@ const LAND = P + '20261031_030420_da39d0cf-af67-4e33-a487-6469549cfbff.png&w=240
 const FORE = P + '20261031_030420_fe406b69-3e6f-4b7c-a17e-ef09db0d270b.png&w=2400&q=88';
 
 const SITES = [
-  {name: 'Règles & prévisions', sub: 'Prochaines règles, fenêtre fertile, retard.', u: .121, v: .31, img: 'screens/cycle.webp'},
-  {name: 'Rappels sur ton tél', sub: 'Pilule, règles dans 2 jours, rendez-vous.', u: .45, v: .56, img: 'screens/rappels.webp'},
-  {name: 'Humeur & journal', sub: 'Douleurs, sommeil, émotions, en un appui.', u: .85, v: .75, img: 'screens/journal.webp'},
-  {name: 'Dossier médecin', sub: 'Un PDF clair à montrer en consultation.', u: .61, v: .35, img: 'screens/dossier.webp'}
+  {name: 'Menstruelle', d: 'Phase 1 · J1 → J5 environ', t: 'Les règles : sans grossesse, la progestérone chute et l’endomètre s’évacue. Les hormones sont au plus bas.', li: ['Crampes (prostaglandines), fatigue', '30 à 80 mL de sang sur 2 à 7 jours', 'Chaleur, mouvement doux, fer'], u: .121, v: .31},
+  {name: 'Folliculaire', d: 'Phase 2 · des règles à l’ovulation', t: 'La FSH fait mûrir un follicule, les œstrogènes montent et reconstruisent l’endomètre.', li: ['L’énergie et la motivation reviennent', 'Peau plus nette, libido en hausse', 'Durée variable : elle fait la longueur du cycle'], u: .45, v: .56},
+  {name: 'Ovulatoire', d: 'Phase 3 · environ 24 à 48 h', t: 'Un pic de LH libère l’ovule, qui vit 12 à 24 h. La fenêtre fertile couvre les 5 jours avant et le jour même.', li: ['Glaire claire et étirable', 'Petite douleur d’un côté possible', 'Environ 14 jours avant les règles suivantes'], u: .85, v: .75},
+  {name: 'Lutéale', d: 'Phase 4 · environ 14 jours', t: 'Le corps jaune produit de la progestérone ; la température du matin monte de 0,3 à 0,5 °C.', li: ['Seins tendus, ballonnements, fringales', 'SPM : irritabilité, tristesse, fatigue', 'Sans grossesse, les règles reviennent'], u: .61, v: .35}
 ];
 const THARSIS = {u: .15, v: .41};
 
@@ -164,15 +170,17 @@ $('#dlGo').onclick = () => location.href = (isAndroid ? $('#dlA') : $('#dlW')).h
 /* ---------- DOM ---------- */
 const H = {w0: $('#word0'), eb: $('#eyebrow'), flare: $('#flare'), gl: $('#gl'), dust: $('#dust'), pin: $('#pin'), w1: $('#word1'), sites: $('#sites'), card: $('#card'), region: $('#region'), land: $('#land'), dest: $('#dest'), fore: $('#fore'), fog: $('#fog'), scrim: $('#scrim'), bar: $('#bar'), hint: $('#hint')};
 H.land.style.backgroundImage = `url("${LAND}")`; H.fore.style.backgroundImage = `url("${FORE}")`;
-H.sites.innerHTML = SITES.map((s, i) => `<li data-i="${i}">${s.name}<small>${s.sub}</small></li>`).join('');
+H.sites.innerHTML = SITES.map((s, i) => `<li data-i="${i}">${s.name}<small>${s.d}</small></li>`).join('');
 let cur = 0;
 function pick(i) {
   cur = i;
   [...H.sites.children].forEach((li, k) => li.classList.toggle('on', k === i));
-  H.card.style.backgroundImage = `url(${SITES[i].img})`;
+  const s = SITES[i];
+  H.card.querySelector('.d').textContent = s.d; H.card.querySelector('h3').textContent = 'Phase ' + s.name.toLowerCase(); H.card.querySelector('.t').textContent = s.t;
+  H.card.querySelector('ul').innerHTML = s.li.map(x => `<li>${x}</li>`).join('');
   const r = H.sites.children[i].getBoundingClientRect();
   H.card.style.top = (r.top + r.height / 2 - H.card.offsetHeight / 2) + 'px';
-  H.region.textContent = SITES[i].name.toUpperCase();
+  H.region.textContent = ('Phase ' + SITES[i].name).toUpperCase();
 }
 [...H.sites.children].forEach((li, i) => { li.onmouseenter = () => pick(i); li.onclick = () => { pick(i); go(2); }; });
 $('#explore').onclick = e => { e.preventDefault(); go(2); };
@@ -213,19 +221,19 @@ spin.add(new THREE.Mesh(new THREE.SphereGeometry(1, 128, 96), new THREE.ShaderMa
     varying vec2 vUv; varying vec3 vObj; varying vec3 vN;
     float luma(vec2 u){ return dot(texture2D(map, u).rgb, vec3(.3,.6,.1)); }
     void main(){
-      vec3 col = texture2D(map, vUv).rgb; col = pow(col, vec3(2.6)) * vec3(1.18,.74,.56);
+      vec3 col = texture2D(map, vUv).rgb; float L0 = dot(col, vec3(.3,.6,.1)); col = pow(vec3(L0), vec3(2.6)) * vec3(3.,.7,1.6);
       vec3 n = normalize(vN);
       vec3 t = normalize(cross(vec3(0.,1.,0.), n)), b = cross(n, t);
       float dx = luma(vUv + vec2(texel.x*2.,0.)) - luma(vUv - vec2(texel.x*2.,0.));
       float dy = luma(vUv + vec2(0.,texel.y*2.)) - luma(vUv - vec2(0.,texel.y*2.));
       n = normalize(n - (t*dx + b*dy) * 1.9);
       float diff = max(dot(n, sun), 0.);
-      vec3 lit = col * (vec3(1.5,1.32,1.18) * pow(diff, .85) + vec3(.2,.09,.06));
+      vec3 lit = col * (vec3(1.5,1.32,1.18) * pow(diff, .85) + vec3(.2,.07,.13));
       float d = acos(clamp(dot(normalize(vObj), hiDir), -1., 1.)) + (luma(vUv) - .45) * .22;
       float m = smoothstep(hiR, hiR - .03, d), edge = smoothstep(.03, .0, abs(d - hiR + .01));
-      lit = mix(lit, mix(lit, vec3(.62,.012,.07) * (.25 + diff * 1.05) * (.5 + luma(vUv) * 1.1), .9), m * hi) + vec3(1.,.42,.4) * edge * hi * .22;
+      lit = mix(lit, mix(lit, vec3(.42,.0,.22) * (.25 + diff * 1.05) * (.5 + luma(vUv) * 1.1), .9), m * hi) + vec3(1.,.55,.85) * edge * hi * .22;
       float fres = pow(1. - max(vN.z, 0.), 3.2);
-      lit += vec3(1.,.5,.26) * fres * (.05 + diff * .5);
+      lit += vec3(1.,.45,.75) * fres * (.05 + diff * .5);
       lit = lit / (lit * .3 + 1.) * 1.3;
       gl_FragColor = vec4(pow(lit, vec3(1./2.2)), 1.) * ready;
     }`
@@ -236,7 +244,7 @@ planet.add(new THREE.Mesh(new THREE.SphereGeometry(1.14, 64, 48), new THREE.Shad
   fragmentShader: `uniform vec3 sun; uniform float ready; varying vec3 vN;
     void main(){ float z = clamp(-vN.z, 0., 1.), a = smoothstep(.0, .55, z);
       float s = .55 + .6 * max(dot(-vN * vec3(1.,1.,0.), normalize(sun * vec3(1.,1.,0.))), 0.);
-      a = pow(a, 2.6) * s * .7; gl_FragColor = vec4(vec3(1.,.64,.36), a * ready); }`
+      a = pow(a, 2.6) * s * .7; gl_FragColor = vec4(vec3(1.,.55,.8), a * ready); }`
 })));
 
 let loadedAt = 0;
@@ -262,7 +270,7 @@ img.src = MAP;
 /* ---------- dust ---------- */
 const dctx = H.dust.getContext('2d');
 const sprite = document.createElement('canvas'); sprite.width = sprite.height = 64;
-{ const g = sprite.getContext('2d'), r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,214,170,.95)'); r.addColorStop(.4, 'rgba(255,180,120,.42)'); r.addColorStop(1, 'rgba(255,180,120,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); }
+{ const g = sprite.getContext('2d'), r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,220,236,.95)'); r.addColorStop(.4, 'rgba(255,150,200,.42)'); r.addColorStop(1, 'rgba(255,150,200,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); }
 let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 const motes = Array.from({length: 34}, () => { const r = rnd(); return {x: rnd(), y: rnd(), r: 3 + r * r * 34, s: .004 + rnd() * .012, p: rnd() * 6.28}; });
 

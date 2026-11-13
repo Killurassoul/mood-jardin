@@ -35,6 +35,7 @@ import { HealthRecordsView } from './views/HealthRecordsView';
 import { StatisticsView } from './views/StatisticsView';
 import { RemindersView } from './views/RemindersView';
 import { ProfileSecurityView } from './views/ProfileSecurityView';
+import { AssistantView } from './views/AssistantView';
 
 export default function App() {
   const [profile, setProfile] = useState<UserProfile>(StorageService.getProfile());
@@ -313,6 +314,10 @@ export default function App() {
               onOpenArticle={handleOpenArticle}
               onSelectTab={tab => setCurrentTab(tab)}
             />
+          )}
+
+          {currentTab === 'assistant' && (
+            <AssistantView onOpenArticle={handleOpenArticle} />
           )}
 
           {currentTab === 'fertility' && (

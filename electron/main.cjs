@@ -7,7 +7,7 @@ const createWindow = () => {
     height: 900,
     minWidth: 360,
     minHeight: 640,
-    backgroundColor: '#2a0d04',
+    backgroundColor: '#2a0616',
     autoHideMenuBar: true,
     webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true }
   });

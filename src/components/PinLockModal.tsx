@@ -38,9 +38,9 @@ export const PinLockModal: React.FC<PinLockModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-linear-to-b from-[#431109] via-[#431109] to-[#431109] text-zinc-800">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-linear-to-b from-[#3d0a24] via-[#3d0a24] to-[#3d0a24] text-zinc-800">
       <div className="w-full max-w-xs flex flex-col items-center text-center animate-in zoom-in-95 bg-card/80 backdrop-blur-md p-8 rounded-3xl border-2 border-rose-200/80 shadow-2xl shadow-rose-200">
-        <div className="w-16 h-16 rounded-3xl bg-rose-100 border border-rose-300/80 flex items-center justify-center text-[#e8283c] mb-4 shadow-md shadow-rose-200">
+        <div className="w-16 h-16 rounded-3xl bg-rose-100 border border-rose-300/80 flex items-center justify-center text-[#ff2e7e] mb-4 shadow-md shadow-rose-200">
           <Lock className="w-7 h-7" />
         </div>
 
@@ -62,7 +62,7 @@ export const PinLockModal: React.FC<PinLockModalProps> = ({
                   hasError
                     ? 'border-red-400 bg-red-400 scale-110'
                     : filled
-                    ? 'border-[#e8283c] bg-[#e8283c] shadow-md shadow-rose-300 scale-110'
+                    ? 'border-[#ff2e7e] bg-[#ff2e7e] shadow-md shadow-rose-300 scale-110'
                     : 'border-rose-300 bg-card'
                 }`}
               />
@@ -104,7 +104,7 @@ export const PinLockModal: React.FC<PinLockModalProps> = ({
           <button
             type="button"
             onClick={handleDelete}
-            className="h-14 rounded-2xl bg-rose-50 hover:bg-rose-100 active:scale-95 text-[#e8283c] transition-all border border-rose-200 flex items-center justify-center"
+            className="h-14 rounded-2xl bg-rose-50 hover:bg-rose-100 active:scale-95 text-[#ff2e7e] transition-all border border-rose-200 flex items-center justify-center"
             title="Effacer"
           >
             <Delete className="w-5 h-5" />

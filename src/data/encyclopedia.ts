@@ -1,4 +1,5 @@
 import { MedicalArticle } from '../types';
+import { PERIODS_ARTICLES } from './periodsEncyclopedia';
 
 export interface CategoryMetadata {
   id: string;
@@ -9,6 +10,7 @@ export interface CategoryMetadata {
 }
 
 export const ENCYCLOPEDIA_CATEGORIES: CategoryMetadata[] = [
+  { id: 'cycle_phases', name: 'Les phases du cycle', description: 'Menstruelle, folliculaire, ovulatoire, lutéale', iconName: 'RefreshCw', color: 'bg-pink-100 text-pink-700' },
   { id: 'menstruation', name: 'Mes règles', description: 'Couleur, durée, retard et petits soucis', iconName: 'Droplet', color: 'bg-rose-100 text-rose-700' },
   { id: 'ovulation', name: 'Tomber enceinte', description: 'Repérer les jours où c’est possible', iconName: 'Sparkles', color: 'bg-purple-100 text-purple-700' },
   { id: 'hormones', name: 'Humeur et énergie', description: 'Pourquoi le corps et les émotions changent', iconName: 'Activity', color: 'bg-fuchsia-100 text-fuchsia-700' },
@@ -24,6 +26,7 @@ export const ENCYCLOPEDIA_CATEGORIES: CategoryMetadata[] = [
 ];
 
 export const MEDICAL_ARTICLES: MedicalArticle[] = [
+  ...PERIODS_ARTICLES,
   {
     id: 'menstruation-sang-marron',
     categoryId: 'menstruation',

@@ -163,7 +163,7 @@ export const HealthRecordsView: React.FC<HealthRecordsViewProps> = ({
         <button
           type="button"
           onClick={handleDownloadPdf}
-          className="px-6 py-3.5 rounded-2xl bg-white text-[#e8283c] hover:bg-rose-950 text-xs font-extrabold shadow-lg transition-transform hover:scale-105 shrink-0"
+          className="px-6 py-3.5 rounded-2xl bg-white text-[#ff2e7e] hover:bg-rose-950 text-xs font-extrabold shadow-lg transition-transform hover:scale-105 shrink-0"
         >
           Télécharger le résumé
         </button>

@@ -91,9 +91,9 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
 
       {/* Simulated notification banner */}
       {testNotificationAlert && (
-        <div className="p-4 rounded-2xl bg-linear-to-r from-rose-600 to-[#e8283c] text-white shadow-xl shadow-rose-300/40 flex items-center justify-between animate-in slide-in-from-top-4 border border-rose-300">
+        <div className="p-4 rounded-2xl bg-linear-to-r from-rose-600 to-[#ff2e7e] text-white shadow-xl shadow-rose-300/40 flex items-center justify-between animate-in slide-in-from-top-4 border border-rose-300">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-card text-[#e8283c] flex items-center justify-center font-bold">
+            <div className="w-8 h-8 rounded-full bg-card text-[#ff2e7e] flex items-center justify-center font-bold">
               <Bell className="w-4 h-4" />
             </div>
             <div>

@@ -1,7 +1,7 @@
 {
   "name": "mood-jardin",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Un espace privé et bienveillant pour suivre ton cycle, tes émotions et ton quotidien.",
   "author": "Mood Jardin",
   "type": "module",

@@ -38,8 +38,8 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={onOpenProfile}
           className="flex items-center gap-2.5 group text-left cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-full bg-linear-to-tr from-[#ff6b5e] to-[#e8283c] p-0.5 shadow-xs group-hover:scale-105 transition-transform">
-            <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-xs font-black text-[#e8283c]">
+          <div className="w-9 h-9 rounded-full bg-linear-to-tr from-[#ff8db8] to-[#ff2e7e] p-0.5 shadow-xs group-hover:scale-105 transition-transform">
+            <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-xs font-black text-[#ff2e7e]">
               {profile.name ? profile.name.charAt(0).toUpperCase() : 'M'}
             </div>
           </div>
@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           type="button"
           onClick={onOpenFloralOnboarding}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-rose-50 text-[#e8283c] hover:bg-rose-100 border border-rose-200/80 transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-rose-50 text-[#ff2e7e] hover:bg-rose-100 border border-rose-200/80 transition-colors"
           title="Revoir le guide de départ"
         >
           <BookOpen className="w-3.5 h-3.5" />
@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onChangeTextSize('normal')}
-            className={`px-2 py-1 rounded-full ${textSize === 'normal' ? 'bg-card shadow-2xs text-[#e8283c]' : 'text-zinc-500'}`}
+            className={`px-2 py-1 rounded-full ${textSize === 'normal' ? 'bg-card shadow-2xs text-[#ff2e7e]' : 'text-zinc-500'}`}
             title="Texte normal"
           >
             A
@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => onChangeTextSize('large')}
-            className={`px-2 py-1 rounded-full text-xs ${textSize === 'large' ? 'bg-card shadow-2xs text-[#e8283c]' : 'text-zinc-500'}`}
+            className={`px-2 py-1 rounded-full text-xs ${textSize === 'large' ? 'bg-card shadow-2xs text-[#ff2e7e]' : 'text-zinc-500'}`}
             title="Texte plus grand"
           >
             A+
@@ -126,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={onLockNow}
-            className="p-2 rounded-full bg-rose-50 text-[#e8283c] hover:bg-rose-100 transition-colors border border-rose-200"
+            className="p-2 rounded-full bg-rose-50 text-[#ff2e7e] hover:bg-rose-100 transition-colors border border-rose-200"
             title="Verrouiller l’application"
           >
             <Lock className="w-4 h-4" />
